@@ -1,0 +1,323 @@
+/* Base styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navigation */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.max-w-6xl {
+    max-width: 72rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.space-x-7 > * + * {
+    margin-left: 1.75rem;
+}
+
+.space-x-1 > * + * {
+    margin-left: 0.25rem;
+}
+
+.space-x-3 > * + * {
+    margin-left: 0.75rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.hover\:text-blue-500:hover {
+    color: #3b82f6;
+}
+
+.transition {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.bg-blue-500 {
+    background-color: #3b82f6;
+}
+
+.hover\:bg-blue-600:hover {
+    background-color: #2563eb;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+/* Main Content */
+.py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Hero Section */
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.md\:text-6xl {
+    font-size: 3.75rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-gray-800 {
+    color: #1f2937;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.grid {
+    display: grid;
+}
+
+.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hidden {
+        display: none;
+    }
+    
+    .md\:flex {
+        display: flex;
+    }
+}
+
+/* Common button styles */
+.btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 9999px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #4A5D4B;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #3A4D3B;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 8px 16px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #4b5563;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #3b4d54;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 8px 16px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #4A5D4B;
+    color: #4A5D4B;
+}
+
+.btn-outline:hover {
+    background-color: #4A5D4B;
+    color: #ffffff;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.btn-white:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 8px 16px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sm {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+/* Floating Header Styles */
+.header-container {
+    padding-top: 0.5rem;
+}
+
+.header-container nav {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-container nav:hover {
+    transform: translateY(2px);
+}
+
+/* Add subtle gradient to the navigation */
+.header-container nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 0 0 2.5rem 2.5rem;
+    pointer-events: none;
+}
+
+/* Add a subtle glow effect */
+.header-container nav {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(74, 93, 75, 0.1);
+}
+
+/* Enhance the sign-up button */
+.header-container .bg-\[\#4A5D4B\] {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-container .bg-\[\#4A5D4B\]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.header-container .bg-\[\#4A5D4B\]:hover::before {
+    left: 100%;
+}
