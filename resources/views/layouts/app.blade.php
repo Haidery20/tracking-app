@@ -30,14 +30,29 @@
                             </a>
                         </div>
                         <div class="hidden md:flex items-center space-x-1">
-                            <a href="{{ route('features') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Features</a>
-                            <a href="{{ route('pricing') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Pricing</a>
-                            <a href="{{ route('about') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">About</a>
+                            @auth
+                                <a href="{{ route('dashboard') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Dashboard</a>
+                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">My Devices</a>
+                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Geofences</a>
+                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Alerts</a>
+                            @else
+                                <a href="{{ route('features') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Features</a>
+                                <a href="{{ route('pricing') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Pricing</a>
+                                <a href="{{ route('about') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">About</a>
+                            @endauth
                         </div>
                     </div>
                     <div class="hidden md:flex items-center space-x-3">
-                        <a href="{{ route('login') }}" class="btn btn-sm text-gray-300 hover:text-white">Login</a>
-                        <a href="{{ route('register') }}" class="btn btn-primary btn-sm">Sign Up</a>
+                        @auth
+                            <span class="text-gray-300">{{ Auth::user()->name }}</span>
+                            <form method="POST" action="{{ route('logout') }}" class="inline">
+                                @csrf
+                                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}" class="btn btn-sm text-gray-300 hover:text-white">Login</a>
+                            <a href="{{ route('register') }}" class="btn btn-primary btn-sm">Sign Up</a>
+                        @endauth
                     </div>
                 </div>
             </div>
