@@ -84,12 +84,29 @@
     .stat-item {
         padding: 24px;
         border-radius: 8px;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
     }
 
     .stat-item:hover {
-        background-color: #f7f7f7;
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat-item .text-4xl {
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .stat-item p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        margin-top: 8px;
     }
 </style>
 @endpush
@@ -150,20 +167,20 @@
     <section class="py-20 bg-[#4A5D4B] text-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['active_users'] }}" data-suffix="+">0</span></div>
                     <p class="text-gray-300">Active Users</p>
                 </div>
-                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="50000" data-suffix="K+">0</span></div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['tracked_assets'] }}" data-suffix="+">{{ number_format($stats['tracked_assets']) }}</span></div>
                     <p class="text-gray-300">Assets Tracked</p>
                 </div>
-                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="99" data-suffix="%">0</span></div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['uptime'] }}" data-suffix="%">0</span></div>
                     <p class="text-gray-300">Uptime</p>
                 </div>
-                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="24" data-suffix="/7">0</span></div>
+                <div class="stat-item">
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['support_hours'] }}" data-suffix="/7">0</span></div>
                     <p class="text-gray-300">Support</p>
                 </div>
             </div>

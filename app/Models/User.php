@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -22,13 +20,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'phone',
-        'profile_photo',
-        'status',
-        'company_name',
-        'address',
-        'subscription_plan',
-        'subscription_ends_at',
     ];
 
     /**
@@ -49,7 +40,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-        'subscription_ends_at' => 'datetime',
     ];
 
     /**
@@ -69,5 +59,29 @@ class User extends Authenticatable
     public function hasRole($roleName)
     {
         return $this->roles()->where('name', $roleName)->exists();
+    }
+
+    /**
+     * Get the devices that the user owns.
+     */
+    public function devices()
+    {
+        return $this->hasMany(Device::class);
+    }
+
+    /**
+     * Get the geofences that the user owns.
+     */
+    public function geofences()
+    {
+        return $this->hasMany(Geofence::class);
+    }
+
+    /**
+     * Get the alert settings that the user owns.
+     */
+    public function alertSettings()
+    {
+        return $this->hasMany(AlertSetting::class);
     }
 }

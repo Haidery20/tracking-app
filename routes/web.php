@@ -17,11 +17,19 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 // Authentication Routes
 Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
+// Dashboard Routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
 // Admin Routes
-Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('/staff/create', [DashboardController::class, 'createStaff'])->name('admin.staff.create');
     Route::delete('/user/{id}', [DashboardController::class, 'deleteUser'])->name('admin.user.delete');
