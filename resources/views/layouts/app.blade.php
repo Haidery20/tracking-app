@@ -13,45 +13,46 @@
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
     <meta name="theme-color" content="#4A5D4B">
     
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="style.css" rel="stylesheet">
+    <link href="{{ mix('css/main.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     @stack('styles')
 </head>
 <body class="bg-gray-100">
-    <div class="header-container fixed w-full top-0 z-50 px-4">
-        <nav class="bg-gray-800 bg-opacity-95 text-white shadow-lg rounded-b-[2.5rem] backdrop-blur-sm">
-            <div class="max-w-6xl mx-auto px-6 relative">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div>
-                            <a href="/" class="flex items-center py-5">
-                                <span class="font-semibold text-white text-lg">Tracking App</span>
+    <div class="header-container fixed w-full top-0 z-50">
+        <nav class="bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="/" class="flex items-center">
+                                <span class="font-bold text-xl text-primary">Tracking App</span>
                             </a>
                         </div>
-                        <div class="hidden md:flex items-center space-x-1">
+                        <div class="hidden md:flex items-center space-x-4 ml-6">
                             @auth
-                                <a href="{{ route('dashboard') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Dashboard</a>
-                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">My Devices</a>
-                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Geofences</a>
-                                <a href="#" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Alerts</a>
+                                <a href="{{ route('dashboard') }}" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Dashboard</a>
+                                <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">My Devices</a>
+                                <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Geofences</a>
+                                <a href="#" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Alerts</a>
                             @else
-                                <a href="{{ route('features') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Features</a>
-                                <a href="{{ route('pricing') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">Pricing</a>
-                                <a href="{{ route('about') }}" class="py-5 px-3 text-gray-300 hover:text-white transition duration-300">About</a>
+                                <a href="{{ route('features') }}" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Features</a>
+                                <a href="{{ route('pricing') }}" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Pricing</a>
+                                <a href="{{ route('about') }}" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">About</a>
                             @endauth
                         </div>
                     </div>
-                    <div class="hidden md:flex items-center space-x-3">
+                    <div class="hidden md:flex items-center space-x-4">
                         @auth
-                            <span class="text-gray-300">{{ Auth::user()->name }}</span>
+                            <span class="text-gray-700">
+                                {{ Auth::user()->name }}
+                            </span>
                             <form method="POST" action="{{ route('logout') }}" class="inline">
                                 @csrf
-                                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+                                <button type="submit" class="text-gray-700 hover:text-danger px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Logout</button>
                             </form>
                         @else
-                            <a href="{{ route('login') }}" class="btn btn-sm text-gray-300 hover:text-white">Login</a>
-                            <a href="{{ route('register') }}" class="btn btn-primary btn-sm">Sign Up</a>
+                            <a href="{{ route('login') }}" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Login</a>
+                            <a href="{{ route('register') }}" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-dark transition-colors duration-200">Sign Up</a>
                         @endauth
                     </div>
                 </div>
@@ -60,7 +61,7 @@
     </div>
 
     <!-- Spacer to prevent content from going under fixed header -->
-    <div class="h-20"></div>
+    <div class="h-16"></div>
 
     <main class="pt-4">
         @yield('content')

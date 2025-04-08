@@ -1,11 +1,91 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@layer base {
+    /* Import custom styles */
+    @import '../css/custom.css';
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@layer components {
+    /* Button Styles */
+    .btn {
+        @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-primary-dark;
+    }
+
+    .btn-white {
+        @apply bg-white text-primary hover:bg-gray-100;
+    }
+
+    .btn-danger {
+        @apply bg-danger text-white hover:bg-danger-dark;
+    }
+
+    /* Card Styles */
+    .card {
+        @apply bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300;
+    }
+
+    /* Section Styles */
+    .section {
+        @apply py-16;
+    }
+
+    /* Feature Card Styles */
+    .feature-card {
+        @apply bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300;
+    }
+
+    /* Pricing Card Styles */
+    .pricing-card {
+        @apply bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300;
+    }
+
+    /* Hero Gradient */
+    .bg-hero-gradient {
+        @apply bg-gradient-to-r from-primary to-primary-dark;
+    }
+
+    /* Glassmorphism */
+    .glass {
+        @apply bg-white/10 backdrop-blur-lg rounded-2xl p-8;
+    }
+}
+
+@layer utilities {
+    /* Custom Colors */
+    :root {
+        --primary: #4A5D4B;
+        --primary-dark: #3A4D3B;
+        --danger: #DC3545;
+        --danger-dark: #C82333;
+    }
+
+    .text-primary {
+        color: var(--primary);
+    }
+
+    .bg-primary {
+        background-color: var(--primary);
+    }
+
+    .bg-primary-dark {
+        background-color: var(--primary-dark);
+    }
+
+    .text-danger {
+        color: var(--danger);
+    }
+
+    .bg-danger {
+        background-color: var(--danger);
+    }
+
+    .bg-danger-dark {
+        background-color: var(--danger-dark);
+    }
 }

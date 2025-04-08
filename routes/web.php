@@ -5,9 +5,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
+
+// Landing Page
+Route::get('/landing', [LandingController::class, 'index'])->name('landing');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/features', [FeaturesController::class, 'index'])->name('features');

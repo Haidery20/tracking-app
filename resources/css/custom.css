@@ -1,0 +1,119 @@
+/* Custom Styles */
+
+/* Base Styles */
+:root {
+    --primary-color: #4A5D4B;
+    --secondary-color: #4b5563;
+    --text-primary: #333;
+    --text-secondary: #6b7280;
+    --gradient-start: #4A5D4B;
+    --gradient-end: #3A4D3B;
+}
+
+body {
+    @apply bg-gray-50 text-gray-800;
+}
+
+/* Button Styles */
+.btn {
+    @apply px-4 py-2 rounded-full transition-all duration-300 font-medium;
+}
+
+.btn-primary {
+    @apply bg-primary text-white;
+}
+
+.btn-primary:hover {
+    @apply bg-secondary transform translate-y-[-2px] shadow-lg;
+}
+
+.btn-secondary {
+    @apply bg-secondary text-white;
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-700 transform translate-y-[-2px] shadow-lg;
+}
+
+/* Hero Section */
+.hero-section {
+    @apply py-16 bg-gradient-to-r from-primary to-secondary text-white;
+}
+
+.hero-title {
+    @apply text-4xl md:text-6xl font-bold leading-tight mb-6;
+}
+
+/* AI Widget */
+.ai-widget {
+    @apply bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl transition-all duration-300 max-w-md mx-auto;
+}
+
+.ai-widget:hover {
+    @apply transform translate-y-[-5px] shadow-2xl;
+}
+
+.ai-widget .icon {
+    @apply text-4xl text-primary my-4;
+}
+
+.ai-widget .title {
+    @apply text-xl font-semibold text-center mb-4;
+}
+
+.ai-widget .description {
+    @apply text-gray-600 text-center mb-4;
+}
+
+.ai-widget .cta-button {
+    @apply bg-primary text-white px-6 py-3 rounded-full transition-all duration-300 font-medium;
+}
+
+.ai-widget .cta-button:hover {
+    @apply bg-secondary transform translate-y-[-2px];
+}
+
+/* Stats Cards */
+.stats-card {
+    @apply bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center transition-all duration-300 cursor-pointer;
+}
+
+.stats-card:hover {
+    @apply transform translate-y-[-5px] bg-white/15;
+}
+
+.stats-card .number {
+    @apply text-4xl font-bold text-white mb-2;
+}
+
+.stats-card .label {
+    @apply text-sm text-white/80 uppercase tracking-wider;
+}
+
+/* Features Section */
+.features-section {
+    @apply py-16 bg-gray-50;
+}
+
+.feature-card {
+    @apply bg-white p-6 rounded-xl shadow-md transition-all duration-300;
+}
+
+.feature-card:hover {
+    @apply transform translate-y-[-5px] shadow-lg;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-title {
+        @apply text-6xl;
+    }
+    
+    .ai-widget {
+        @apply max-w-lg;
+    }
+    
+    .stats-card {
+        @apply p-8;
+    }
+}
