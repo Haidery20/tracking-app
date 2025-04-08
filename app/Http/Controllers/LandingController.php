@@ -9,8 +9,8 @@ class LandingController extends Controller
     public function index()
     {
         $stats = [
-            'active_users' => 5000,
-            'tracked_assets' => 10000,
+            'connections_made' => 5000,
+            'projects_completed' => 100,
             'uptime' => 99.99,
             'support_hours' => 24
         ];

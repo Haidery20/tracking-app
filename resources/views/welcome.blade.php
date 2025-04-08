@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'TechBase - Next Generation Technology Solutions')
+@section('title', 'KONEKTA - Connecting Technology Solutions')
 
 @push('styles')
 <style>
@@ -134,11 +134,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="text-center">
                 <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="gradient-text">TechBase</span>
+                    <span class="gradient-text">KONEKTA</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                    Innovating technology solutions for the modern world. 
-                    Experience the future of tech with our cutting-edge solutions.
+                    Connecting people, businesses, and technologies. 
+                    Experience seamless integration with KONEKTA's innovative solutions.
                 </p>
                 <div class="flex justify-center space-x-4">
                     <a href="{{ route('register') }}" class="btn btn-primary px-8 py-4 text-lg">Get Started</a>
@@ -153,16 +153,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Solutions</h2>
-                <p class="text-xl text-gray-600">Empowering businesses with advanced technology solutions</p>
+                <p class="text-xl text-gray-600">Empowering connections through advanced technology solutions</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="feature-card">
                     <div class="text-blue-600 mb-6">
-                        <i class="fas fa-rocket text-4xl"></i>
+                        <i class="fas fa-network-wired text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
-                    <p class="text-gray-600">Scalable cloud infrastructure for your growing business needs.</p>
+                    <h3 class="text-xl font-semibold mb-4">Network Solutions</h3>
+                    <p class="text-gray-600">Seamless network integration for your business needs.</p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="feature-card">
@@ -170,15 +170,15 @@
                         <i class="fas fa-shield-alt text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Security</h3>
-                    <p class="text-gray-600">State-of-the-art security measures to protect your data.</p>
+                    <p class="text-gray-600">State-of-the-art security measures to protect your connections.</p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="text-purple-600 mb-6">
-                        <i class="fas fa-chart-line text-4xl"></i>
+                        <i class="fas fa-globe text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Analytics</h3>
-                    <p class="text-gray-600">Powerful analytics tools for data-driven decisions.</p>
+                    <h3 class="text-xl font-semibold mb-4">Global Reach</h3>
+                    <p class="text-gray-600">Connect with anyone, anywhere in the world.</p>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="stat-item">
                     <div class="text-4xl font-bold mb-2"><span class="counter" data-target="5000">0</span></div>
-                    <p class="text-gray-400">Happy Clients</p>
+                    <p class="text-gray-400">Connections Made</p>
                 </div>
                 <div class="stat-item">
                     <div class="text-4xl font-bold mb-2"><span class="counter" data-target="100">0</span></div>
@@ -211,9 +211,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Connect?</h2>
             <p class="text-xl text-white/90 mb-12 max-w-3xl mx-auto">
-                Join our community of forward-thinking businesses and experience the power of modern technology.
+                Join our community of connected businesses and experience the power of seamless integration.
             </p>
             <div class="flex justify-center space-x-4">
                 <a href="{{ route('register') }}" class="btn btn-white px-8 py-4 text-lg">Start Free Trial</a>
