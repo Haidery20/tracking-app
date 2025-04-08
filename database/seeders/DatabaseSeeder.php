@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         // Create admin user
         $admin = User::create([
             'name' => 'Admin User',
-            'email' => 'admin@trackingapp.com',
+            'email' => 'admin@konekta.com',
             'password' => Hash::make('admin123'),
             'status' => 'active',
             'email_verified_at' => now(),
@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
         // Create sample staff users
         $staff1 = User::create([
             'name' => 'John Staff',
-            'email' => 'john@trackingapp.com',
+            'email' => 'john@konekta.com',
             'password' => Hash::make('staff123'),
             'status' => 'active',
             'email_verified_at' => now(),
@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
 
         $staff2 = User::create([
             'name' => 'Jane Staff',
-            'email' => 'jane@trackingapp.com',
+            'email' => 'jane@konekta.com',
             'password' => Hash::make('staff123'),
             'status' => 'active',
             'email_verified_at' => now(),

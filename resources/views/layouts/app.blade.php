@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Tracking Web App')</title>
+    <title>@yield('title', 'KONEKTA')</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -25,7 +25,7 @@
                     <div class="flex">
                         <div class="flex-shrink-0 flex items-center">
                             <a href="/" class="flex items-center">
-                                <span class="font-bold text-xl text-primary">Tracking App</span>
+                                <span class="font-bold text-xl text-primary">KONEKTA</span>
                             </a>
                         </div>
                         <div class="hidden md:flex items-center space-x-4 ml-6">
@@ -72,8 +72,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Tracking App</h3>
-                    <p class="text-gray-400 mb-4">Your trusted partner in real-time asset tracking and fleet management solutions.</p>
+                    <h3 class="text-lg font-semibold mb-4">KONEKTA</h3>
+                    <p class="text-gray-400 mb-4">Your trusted partner in connectivity solutions.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition duration-300 rounded-full hover:bg-gray-700 p-2">
                             <i class="fab fa-facebook"></i>
@@ -115,7 +115,7 @@
                     <ul class="space-y-2">
                         <li class="flex items-center text-gray-400">
                             <i class="fas fa-envelope mr-2"></i>
-                            support@trackingapp.com
+                            support@konekta.com
                         </li>
                         <li class="flex items-center text-gray-400">
                             <i class="fas fa-phone mr-2"></i>
@@ -133,7 +133,7 @@
             <div class="border-t border-gray-700 mt-8 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="text-gray-400 mb-4 md:mb-0">
-                        &copy; {{ date('Y') }} Tracking App. All rights reserved.
+                        &copy; {{ date('Y') }} KONEKTA. All rights reserved.
                     </div>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
