@@ -1,132 +1,189 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - KONEKTA</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .royal-blue {
+            color: #4169E1;
+        }
+        .royal-blue-dark {
+            color: #3050E0;
+        }
+        .military-green {
+            background-color: #3E8E41;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    @include('layouts.header')
 
-@section('title', 'Features - Tracking Web App')
+    <!-- Features Hero -->
+    <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block">Powerful Features</span>
+                            <span class="block text-royal-blue">Built for Success</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Discover the advanced features that make KONEKTA the perfect choice for your connectivity needs.
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
 
-@section('content')
-<div class="bg-gray-50">
-    <!-- Hero Section -->
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Powerful Tracking Features</h1>
-                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Discover all the advanced features that make our tracking solution the best choice for your business.</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="{{ route('register') }}" class="btn btn-primary">Start Free Trial</a>
-                    <a href="{{ route('pricing') }}" class="btn btn-outline">View Pricing</a>
+    <!-- Feature Cards -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="text-royal-blue mb-6">
+                        <i class="fas fa-network-wired text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-time Monitoring</h3>
+                    <p class="text-gray-600">Get instant updates on your connectivity status with our real-time monitoring system.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="text-royal-blue mb-6">
+                        <i class="fas fa-brain text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI Insights</h3>
+                    <p class="text-gray-600">Our AI system provides intelligent insights and predictions based on your connectivity data.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="text-royal-blue mb-6">
+                        <i class="fas fa-cog text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Device Management</h3>
+                    <p class="text-gray-600">Easily manage all your connectivity devices from one intuitive interface.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Main Features -->
-    <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Real-Time Tracking -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-[#4A5D4B] mb-6">
-                        <i class="fas fa-map-marked-alt text-4xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Real-Time GPS Tracking</h3>
-                    <p class="text-gray-600 mb-6">Monitor your assets with precision using our advanced GPS tracking system. Get updates every 30 seconds with accurate location data.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Live location updates
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Historical route playback
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Speed and direction monitoring
-                        </li>
-                    </ul>
+    <!-- Stats Section -->
+    <div class="py-12 bg-military-green">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white">5,000+</div>
+                    <div class="text-gray-300">Connections Made</div>
                 </div>
-
-                <!-- Geofencing -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-[#4A5D4B] mb-6">
-                        <i class="fas fa-draw-polygon text-4xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Smart Geofencing</h3>
-                    <p class="text-gray-600 mb-6">Create virtual boundaries and get instant alerts when assets enter or exit designated areas.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Custom zone creation
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Entry/exit notifications
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Multiple zone management
-                        </li>
-                    </ul>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white">100+</div>
+                    <div class="text-gray-300">Projects Completed</div>
                 </div>
-
-                <!-- Analytics -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-[#4A5D4B] mb-6">
-                        <i class="fas fa-chart-bar text-4xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Advanced Analytics</h3>
-                    <p class="text-gray-600 mb-6">Make data-driven decisions with comprehensive analytics and reporting tools.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Custom reports generation
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Performance metrics
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Data visualization
-                        </li>
-                    </ul>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white">99.99%</div>
+                    <div class="text-gray-300">Uptime Guarantee</div>
                 </div>
-
-                <!-- Alerts -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-[#4A5D4B] mb-6">
-                        <i class="fas fa-bell text-4xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Smart Notifications</h3>
-                    <p class="text-gray-600 mb-6">Stay informed with customizable alerts and notifications for all your tracking needs.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Custom alert rules
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Multiple notification channels
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Real-time alerts
-                        </li>
-                    </ul>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-white">24/7</div>
+                    <div class="text-gray-300">Support Available</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-[#4A5D4B] text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Experience These Features?</h2>
-            <p class="text-xl mb-8 text-gray-200">Start your free trial today and discover why thousands of businesses trust our tracking solution.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="{{ route('register') }}" class="btn btn-white">Start Free Trial</a>
-                <a href="#" class="btn btn-outline border-white text-white hover:bg-white hover:text-[#4A5D4B]">Contact Sales</a>
+    <!-- Footer -->
+    <footer class="bg-military-green">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Company</h3>
+                    <div class="mt-4 space-y-4">
+                        <p class="text-gray-300">
+                            KONEKTA Technologies Ltd.<br>
+                            123 Innovation Street<br>
+                            Tech City, TC 12345
+                        </p>
+                        <div class="space-y-2">
+                            <p class="text-gray-300"><i class="fas fa-phone mr-2"></i>+1 (555) 123-4567</p>
+                            <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i>info@konekta.com</p>
+                            <p class="text-gray-300"><i class="fas fa-clock mr-2"></i>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Quick Links</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="/about" class="text-base text-gray-300 hover:text-white">About us</a></li>
+                        <li><a href="/features" class="text-base text-gray-300 hover:text-white">Features</a></li>
+                        <li><a href="/pricing" class="text-base text-gray-300 hover:text-white">Pricing</a></li>
+                        <li><a href="/contact" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Support</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Contact Support</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">API Reference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Follow Us</h3>
+                    <div class="mt-4 space-y-4">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-300">Subscribe to our newsletter</p>
+                            <form class="mt-2">
+                                <div class="flex">
+                                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-royal-blue">
+                                    <button type="submit" class="px-4 py-2 bg-royal-blue text-white rounded-r-md hover:bg-royal-blue-dark focus:outline-none focus:ring-2 focus:ring-royal-blue">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <div class="flex justify-between items-center">
+                    <p class="text-base text-gray-300">&copy; 2025 KONEKTA. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-</div>
-@endsection
+    </footer>
+</body>
+</html>

@@ -5,14 +5,21 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ContactController;
+
+// Landing Page
+Route::get('/landing', [LandingController::class, 'index'])->name('landing');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/features', [FeaturesController::class, 'index'])->name('features');
 Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 // Authentication Routes
 Route::get('/login', [LoginController::class, 'show'])->name('login');

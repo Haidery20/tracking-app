@@ -58,8 +58,8 @@
                 </div>
             </div>
 
-            <div class="mb-6">
-                <div class="g-recaptcha" data-sitekey="{{ config('no-captcha.sitekey') }}"></div>
+            <div class="mb-4">
+                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITEKEY') }}"></div>
             </div>
 
             <button type="submit" 
