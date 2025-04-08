@@ -11,109 +11,177 @@
 }
 
 body {
-    @apply bg-gray-50 text-gray-800;
+    background-color: #f9fafb; /* Tailwind's bg-gray-50 */
+    color: #1f2937; /* Tailwind's text-gray-800 */
 }
 
 /* Button Styles */
 .btn {
-    @apply px-4 py-2 rounded-full transition-all duration-300 font-medium;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .btn-primary {
-    @apply bg-primary text-white;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .btn-primary:hover {
-    @apply bg-secondary transform translate-y-[-2px] shadow-lg;
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .btn-secondary {
-    @apply bg-secondary text-white;
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .btn-secondary:hover {
-    @apply bg-gray-700 transform translate-y-[-2px] shadow-lg;
+    background-color: #374151; /* Tailwind's bg-gray-700 */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
 }
 
 /* Hero Section */
 .hero-section {
-    @apply py-16 bg-gradient-to-r from-primary to-secondary text-white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
 }
 
 .hero-title {
-    @apply text-4xl md:text-6xl font-bold leading-tight mb-6;
+        font-size: 2.25rem; /* text-4xl */
+        font-weight: 700; /* font-bold */
+        line-height: 1.25; /* leading-tight */
+        margin-bottom: 1.5rem; /* mb-6 */
+    }
+    
+    @media (min-width: 768px) {
+        .hero-title {
+            font-size: 3.75rem; /* md:text-6xl */
+        }
 }
 
 /* AI Widget */
 .ai-widget {
-    @apply bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl transition-all duration-300 max-w-md mx-auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    max-width: 28rem; /* Tailwind's max-w-md */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ai-widget:hover {
-    @apply transform translate-y-[-5px] shadow-2xl;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Tailwind's shadow-2xl */
 }
 
 .ai-widget .icon {
-    @apply text-4xl text-primary my-4;
+    font-size: 2.25rem; /* Tailwind's text-4xl */
+    color: var(--primary-color); /* Tailwind's text-primary */
+    margin-top: 1rem; /* Tailwind's my-4 */
+    margin-bottom: 1rem; /* Tailwind's my-4 */
 }
 
 .ai-widget .title {
-    @apply text-xl font-semibold text-center mb-4;
+    font-size: 1.25rem; /* Tailwind's text-xl */
+    font-weight: 600; /* Tailwind's font-semibold */
+    text-align: center; /* Tailwind's text-center */
+    margin-bottom: 1rem; /* Tailwind's mb-4 */
 }
 
 .ai-widget .description {
-    @apply text-gray-600 text-center mb-4;
+    color: #4b5563; /* Tailwind's text-gray-600 */
+    text-align: center;
+    margin-bottom: 1rem; /* Tailwind's mb-4 */
 }
 
 .ai-widget .cta-button {
-    @apply bg-primary text-white px-6 py-3 rounded-full transition-all duration-300 font-medium;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 .ai-widget .cta-button:hover {
-    @apply bg-secondary transform translate-y-[-2px];
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 /* Stats Cards */
 .stats-card {
-    @apply bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center transition-all duration-300 cursor-pointer;
+    .stats-card {
+        background-color: rgba(255, 255, 255, 0.1); /* Tailwind's bg-white/10 */
+        backdrop-filter: blur(20px); /* Tailwind's backdrop-blur-xl */
+        border-radius: 1rem; /* Tailwind's rounded-xl */
+        padding: 1.5rem; /* Tailwind's p-6 */
+        text-align: center; /* Tailwind's text-center */
+        transition: all 0.3s; /* Tailwind's transition duration-300 */
+        cursor: pointer; /* Tailwind's cursor-pointer */
+    }
 }
 
 .stats-card:hover {
-    @apply transform translate-y-[-5px] bg-white/15;
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .stats-card .number {
-    @apply text-4xl font-bold text-white mb-2;
+    font-size: 2.25rem; /* Tailwind's text-4xl */
+    font-weight: 700; /* Tailwind's font-bold */
+    color: white; /* Tailwind's text-white */
+    margin-bottom: 0.5rem; /* Tailwind's mb-2 */
 }
 
 .stats-card .label {
-    @apply text-sm text-white/80 uppercase tracking-wider;
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    color: rgba(255, 255, 255, 0.8); /* Tailwind's text-white/80 */
+    text-transform: uppercase; /* Tailwind's uppercase */
+    letter-spacing: 0.05em; /* Tailwind's tracking-wider */
 }
 
 /* Features Section */
 .features-section {
-    @apply py-16 bg-gray-50;
+    padding-top: 4rem; /* Tailwind's py-16 */
+    padding-bottom: 4rem; /* Tailwind's py-16 */
+    background-color: #f9fafb; /* Tailwind's bg-gray-50 */
 }
 
 .feature-card {
-    @apply bg-white p-6 rounded-xl shadow-md transition-all duration-300;
+    background-color: white;
+    padding: 1.5rem; /* Tailwind's p-6 */
+    border-radius: 1rem; /* Tailwind's rounded-xl */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tailwind's shadow-lg */
 }
 
 .feature-card:hover {
-    @apply transform translate-y-[-5px] shadow-lg;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tailwind's shadow-lg */
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
     .hero-title {
-        @apply text-6xl;
+        font-size: 3.75rem; /* Tailwind's text-6xl */
+        line-height: 1; /* Adjust line-height for text-6xl */
     }
     
     .ai-widget {
-        @apply max-w-lg;
+        max-width: 32rem; /* Tailwind's max-w-lg */
     }
     
     .stats-card {
-        @apply p-8;
+        padding: 2rem; /* Tailwind's p-8 */
     }
 }

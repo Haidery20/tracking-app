@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome to Tracking App')
+@section('title', 'TechBase - Next Generation Technology Solutions')
 
 @push('styles')
 <style>
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --background-dark: #1f2937;
+        --text-light: #f3f4f6;
+    }
+
     .bg-pattern {
         background-image: url('https://images.unsplash.com/photo-1518623001395-125242310d0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
         background-size: cover;
@@ -15,6 +22,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        opacity: 0.1;
     }
 
     .content-wrapper {
@@ -37,7 +45,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to right, rgba(31, 41, 55, 0.9), rgba(74, 93, 75, 0.9));
+        background: linear-gradient(to right, rgba(31, 41, 55, 0.9), rgba(37, 99, 235, 0.9));
         z-index: 1;
     }
 
@@ -52,33 +60,42 @@
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     .btn-primary {
-        background-color: #4A5D4B;
-        color: #fff;
+        background-color: var(--primary-color);
+        color: white;
         border: none;
     }
 
     .btn-primary:hover {
-        background-color: #3A4D3B;
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
     }
 
     .btn-outline {
         background-color: transparent;
-        color: #4A5D4B;
-        border: 2px solid #4A5D4B;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
     }
 
     .btn-outline:hover {
-        background-color: #4A5D4B;
-        color: #fff;
+        background-color: var(--primary-color);
+        color: white;
     }
 
-    .btn-lg {
-        padding: 16px 32px;
-        font-size: 18px;
+    .feature-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     }
 
     .stat-item {
@@ -97,16 +114,15 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .stat-item .text-4xl {
-        color: rgba(255, 255, 255, 0.95);
-        font-weight: 700;
-        line-height: 1.2;
+    .cta-section {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 4rem 0;
     }
 
-    .stat-item p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 16px;
-        margin-top: 8px;
+    .gradient-text {
+        background: linear-gradient(45deg, #2563eb, #1e40af);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 </style>
 @endpush
@@ -114,14 +130,19 @@
 @section('content')
 <div class="relative overflow-hidden">
     <!-- Hero Section -->
-    <section class="relative pt-16 pb-32 bg-gradient-to-br from-gray-900 to-[#4A5D4B] text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+    <section class="hero-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-8">Real-Time Asset Tracking Made Simple</h1>
-                <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto">Track your assets in real-time with our advanced GPS tracking solution. Perfect for fleet management, logistics, and personal tracking needs.</p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">TechBase</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Innovating technology solutions for the modern world. 
+                    Experience the future of tech with our cutting-edge solutions.
+                </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="{{ route('register') }}" class="btn btn-white">Start Tracking Now</a>
-                    <a href="{{ route('features') }}" class="btn btn-outline border-white text-white hover:bg-white hover:text-[#4A5D4B]">Learn More</a>
+                    <a href="{{ route('register') }}" class="btn btn-primary px-8 py-4 text-lg">Get Started</a>
+                    <a href="{{ route('features') }}" class="btn btn-outline px-8 py-4 text-lg">Explore Features</a>
                 </div>
             </div>
         </div>
@@ -129,72 +150,74 @@
 
     <!-- Features Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Tracking Solution?</h2>
-                <p class="text-xl text-gray-600">Powerful features to help you monitor and manage your assets</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Solutions</h2>
+                <p class="text-xl text-gray-600">Empowering businesses with advanced technology solutions</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                    <div class="text-[#4A5D4B] mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-map-marked-alt text-4xl"></i>
+                <div class="feature-card">
+                    <div class="text-blue-600 mb-6">
+                        <i class="fas fa-rocket text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Real-Time Tracking</h3>
-                    <p class="text-gray-600">Monitor your assets in real-time with precise GPS location tracking and instant updates.</p>
+                    <h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600">Scalable cloud infrastructure for your growing business needs.</p>
                 </div>
                 <!-- Feature 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                    <div class="text-[#4A5D4B] mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-bell text-4xl"></i>
+                <div class="feature-card">
+                    <div class="text-green-600 mb-6">
+                        <i class="fas fa-shield-alt text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Instant Alerts</h3>
-                    <p class="text-gray-600">Get notified instantly when your assets enter or leave designated areas.</p>
+                    <h3 class="text-xl font-semibold mb-4">Security</h3>
+                    <p class="text-gray-600">State-of-the-art security measures to protect your data.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                    <div class="text-[#4A5D4B] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="feature-card">
+                    <div class="text-purple-600 mb-6">
                         <i class="fas fa-chart-line text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Analytics</h3>
-                    <p class="text-gray-600">Comprehensive analytics and reports to optimize your operations.</p>
+                    <p class="text-gray-600">Powerful analytics tools for data-driven decisions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="py-20 bg-[#4A5D4B] text-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="stat-item">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['active_users'] }}" data-suffix="+">0</span></div>
-                    <p class="text-gray-300">Active Users</p>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="5000">0</span></div>
+                    <p class="text-gray-400">Happy Clients</p>
                 </div>
                 <div class="stat-item">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['tracked_assets'] }}" data-suffix="+">{{ number_format($stats['tracked_assets']) }}</span></div>
-                    <p class="text-gray-300">Assets Tracked</p>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="100">0</span></div>
+                    <p class="text-gray-400">Projects Completed</p>
                 </div>
                 <div class="stat-item">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['uptime'] }}" data-suffix="%">0</span></div>
-                    <p class="text-gray-300">Uptime</p>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="99.99">0</span></div>
+                    <p class="text-gray-400">Uptime</p>
                 </div>
                 <div class="stat-item">
-                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="{{ $stats['support_hours'] }}" data-suffix="/7">0</span></div>
-                    <p class="text-gray-300">Support</p>
+                    <div class="text-4xl font-bold mb-2"><span class="counter" data-target="24">0</span></div>
+                    <p class="text-gray-400">Support Hours</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-8">Ready to Start Tracking?</h2>
-            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">Join thousands of satisfied customers who trust our tracking solution.</p>
+    <section class="cta-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-white/90 mb-12 max-w-3xl mx-auto">
+                Join our community of forward-thinking businesses and experience the power of modern technology.
+            </p>
             <div class="flex justify-center space-x-4">
-                <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Get Started</a>
-                <a href="{{ route('pricing') }}" class="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-gray-900">View Pricing</a>
+                <a href="{{ route('register') }}" class="btn btn-white px-8 py-4 text-lg">Start Free Trial</a>
+                <a href="{{ route('contact') }}" class="btn btn-outline-white px-8 py-4 text-lg">Contact Us</a>
             </div>
         </div>
     </section>

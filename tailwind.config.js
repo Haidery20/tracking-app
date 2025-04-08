@@ -9,10 +9,16 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#4A5D4B',
-                'primary-dark': '#3A4D3B',
-                danger: '#DC3545',
-                'danger-dark': '#C82333',
+                primary: '#2563eb',
+                'primary-dark': '#1d4ed8',
+                secondary: '#3b82f6',
+                'secondary-dark': '#3167d9',
+                success: '#10b981',
+                'success-dark': '#059669',
+                warning: '#f59e0b',
+                'warning-dark': '#d97706',
+                error: '#ef4444',
+                'error-dark': '#dc2626',
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
