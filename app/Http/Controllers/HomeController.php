@@ -9,14 +9,46 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Get static statistics for the landing page
-        $stats = [
-            'connections_made' => 5000,
-            'projects_completed' => 100,
-            'uptime' => 99.99,
-            'support_hours' => 24
-        ];
+        return view('welcome');
+    }
 
-        return view('welcome', compact('stats'));
+    public function services()
+    {
+        return view('services');
+    }
+
+    public function pricing()
+    {
+        return view('pricing');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function blog()
+    {
+        return view('blog');
+    }
+
+    public function careers()
+    {
+        return view('careers');
+    }
+
+    public function docs()
+    {
+        return view('docs');
+    }
+
+    public function support()
+    {
+        return view('support');
     }
 }
