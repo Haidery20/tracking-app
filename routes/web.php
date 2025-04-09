@@ -14,25 +14,22 @@ use Inertia\Inertia;
 
 // Main Pages
 Route::get('/', function () {
-    return Inertia::render('Landing');
+    return view('landing');
 })->name('landing');
 
 Route::get('/features', function () {
-    return Inertia::render('Features');
+    return view('features');
 })->name('features');
 
 Route::get('/pricing', function () {
-    return Inertia::render('Pricing');
+    return view('pricing');
 })->name('pricing');
 
 Route::get('/about', function () {
-    return Inertia::render('About');
+    return view('about');
 })->name('about');
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-})->name('contact');
-
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 // Authentication Routes

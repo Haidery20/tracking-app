@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Closure;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -44,5 +45,24 @@ class HandleInertiaRequests extends Middleware
                 'message' => fn () => $request->session()->get('message')
             ],
         ]);
+    }
+
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return \Illuminate\Http\Response
+     */
+    public function handle(Request $request, Closure $next)
+    {
+        $response = parent::handle($request, $next);
+        
+        // Add caching headers for static assets
+        if ($request->isMethod('GET')) {
+            $response->headers->set('Cache-Control', 'public, max-age=31536000');
+        }
+        
+        return $response;
     }
 } 
