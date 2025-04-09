@@ -30,7 +30,7 @@
         overflow: hidden;
         white-space: nowrap;
         animation: typing 3.5s steps(40, end) forwards infinite;
-    }
+`    }
 
     @keyframes typing {
         from { width: 0 }
@@ -41,7 +41,9 @@
 <div class="relative">
     <!-- Hero Section -->
     <div class="relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="relative max-w-7xl mx-auto">
             <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                 <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">

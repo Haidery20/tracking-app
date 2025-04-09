@@ -195,27 +195,4 @@
             </div>
         </div>
     </div>
-
-    <!-- CTA Section -->
-    <div class="bg-secondary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="cta-title text-3xl tracking-tight text-white sm:text-4xl">
-                <span class="block">Ready to get started?</span>
-                <span class="block text-primary">Start your free trial today.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50">
-                        Get started
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('contact') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
-                        Contact sales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
