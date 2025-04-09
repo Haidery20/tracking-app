@@ -70,7 +70,7 @@ const WebServices = () => {
                             className="bg-gray-50 p-6 rounded-lg"
                         >
                             <div className="text-center">
-                                <div className="w-12 h-12 rounded-full bg-royal-blue text-white flex items-center justify-center mb-4">
+                                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mb-4">
                                     <i className={`${service.icon} text-xl`} />
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -84,7 +84,7 @@ const WebServices = () => {
                             <div className="space-y-2">
                                 {service.features.map((feature, featureIndex) => (
                                     <div key={featureIndex} className="flex items-center">
-                                        <i className="fas fa-check text-royal-blue mr-2"></i>
+                                        <i className="fas fa-check text-primary mr-2"></i>
                                         {feature}
                                     </div>
                                 ))}

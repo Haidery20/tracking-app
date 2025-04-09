@@ -1,21 +1,23 @@
 import React from 'react';
-import WebServices from '../components/WebServices.jsx';
-import WebPricing from '../components/WebPricing.jsx';
-import WebFeatures from '../components/WebFeatures.jsx';
-import WebFAQ from '../components/WebFAQ.jsx';
-import WebTestimonials from '../components/WebTestimonials.jsx';
-import WebTeam from '../components/WebTeam.jsx';
-import WebCTA from '../components/WebCTA.jsx';
+import Hero from '../components/Hero';
+import HowItWorks from '../components/HowItWorks';
+import WebServices from '../components/WebServices';
+import WebFeatures from '../components/WebFeatures';
+import WebTestimonials from '../components/WebTestimonials';
+import WebPricing from '../components/WebPricing';
+import WebFAQ from '../components/WebFAQ';
+import WebCTA from '../components/WebCTA';
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="bg-transparent">
+            <Hero />
+            <HowItWorks />
             <WebServices />
-            <WebPricing />
             <WebFeatures />
-            <WebFAQ />
             <WebTestimonials />
-            <WebTeam />
+            <WebPricing />
+            <WebFAQ />
             <WebCTA />
         </div>
     );

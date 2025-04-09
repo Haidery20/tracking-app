@@ -24,7 +24,7 @@
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="flex-shrink-0 flex items-center">
-                            <a href="/" class="flex items-center">
+                            <a href="{{ route('home') }}" class="flex items-center">
                                 <span class="font-bold text-xl text-primary">KONEKTA</span>
                             </a>
                         </div>
