@@ -10,28 +10,44 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactController;
+use Inertia\Inertia;
 
-// Landing Page
-Route::get('/landing', [LandingController::class, 'index'])->name('landing');
+// Main Pages
+Route::get('/', function () {
+    return Inertia::render('Landing');
+})->name('landing');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/features', [FeaturesController::class, 'index'])->name('features');
-Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/features', function () {
+    return Inertia::render('Features');
+})->name('features');
+
+Route::get('/pricing', function () {
+    return Inertia::render('Pricing');
+})->name('pricing');
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 // Authentication Routes
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/register', [RegisterController::class, 'show'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/login', function () {
+    return Inertia::render('Auth/Login');
+})->name('login');
+
+Route::get('/register', function () {
+    return Inertia::render('Auth/Register');
+})->name('register');
 
 // Dashboard Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return Inertia::render('Dashboard');
     })->name('dashboard');
 });
 

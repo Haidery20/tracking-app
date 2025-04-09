@@ -19,6 +19,8 @@ module.exports = {
                 'warning-dark': '#d97706',
                 error: '#ef4444',
                 'error-dark': '#dc2626',
+                'royal-blue': '#4f46e5',
+                'royal-blue-dark': '#4338ca',
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
