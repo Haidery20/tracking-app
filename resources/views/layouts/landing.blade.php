@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,47 +147,265 @@
             background: #f3f4f6;
         }
     </style>
+
+    <!-- Theme Styles -->
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #4a5d23;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --surface-color: #f3f4f6;
+            --border-color: #e5e7eb;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --input-bg: #ffffff;
+            --input-border: #e5e7eb;
+            --footer-bg: #1a365d;
+            --footer-text: #f3f4f6;
+        }
+
+        .dark {
+            --primary-color: #3b82f6;
+            --secondary-color: #10b981;
+            --text-color: #f3f4f6;
+            --bg-color: #111827;
+            --surface-color: #1f2937;
+            --border-color: #374151;
+            --card-bg: #1f2937;
+            --card-border: #374151;
+            --input-bg: #1f2937;
+            --input-border: #374151;
+            --footer-bg: #0f172a;
+            --footer-text: #f3f4f6;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .ai-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .ai-chat {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .ai-message.user {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .ai-message.assistant {
+            background: var(--surface-color);
+            color: var(--text-color);
+        }
+
+        .ai-chat-input input {
+            background: var(--input-bg);
+            color: var(--text-color);
+            border: 1px solid var(--input-border);
+        }
+
+        .ai-chat-input button {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+        }
+
+        /* Input Styles */
+        input, textarea, select {
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            border-color: var(--input-border);
+        }
+
+        /* Theme Toggle Styles */
+        .theme-toggle {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle .sun {
+            display: none;
+        }
+
+        .theme-toggle .moon {
+            display: block;
+        }
+
+        .dark .theme-toggle .sun {
+            display: block;
+        }
+
+        .dark .theme-toggle .moon {
+            display: none;
+        }
+
+        /* Dark Mode Specific Styles */
+        .dark .bg-white {
+            background-color: var(--surface-color);
+        }
+
+        .dark .text-gray-800 {
+            color: var(--text-color);
+        }
+
+        .dark .border-gray-200 {
+            border-color: var(--border-color);
+        }
+
+        .dark .hover\:bg-gray-50:hover {
+            background-color: var(--surface-color);
+        }
+
+        .dark .hover\:text-gray-900:hover {
+            color: var(--text-color);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
         <!-- Navigation -->
-        <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl mx-auto z-50">
-            <div class="nav-gradient rounded-full shadow-lg">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
-                        <div class="flex">
-                            <div class="flex-shrink-0 flex items-center">
-                                <a href="/" class="text-2xl font-bold text-white">KONEKTA</a>
-                            </div>
-                            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                                <a href="{{ route('features') }}" class="text-gray-200 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-white transition-colors duration-300">Features</a>
-                                <a href="{{ route('pricing') }}" class="text-gray-200 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-white transition-colors duration-300">Pricing</a>
-                                <a href="{{ route('about') }}" class="text-gray-200 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-white transition-colors duration-300">About</a>
-                                <a href="{{ route('contact') }}" class="text-gray-200 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-white transition-colors duration-300">Contact</a>
-                                <a href="{{ route('community') }}" class="text-gray-200 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-white transition-colors duration-300">Community</a>
-                            </div>
-                        </div>
-                        <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
-                            <a href="{{ route('login') }}" class="text-gray-200 hover:text-white transition-colors duration-300">
-                                Sign in
-                            </a>
-                            <a href="{{ route('register') }}" class="bg-white hover:bg-gray-100 text-primary px-4 py-2 rounded-full transition-colors duration-300">
-                                Get started
-                            </a>
-                        </div>
-                        <!-- Mobile menu button -->
-                        <div class="sm:hidden flex items-center">
-                            <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="sr-only">Open main menu</span>
-                                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            </button>
+        <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-[#1a365d] to-[#4a5d23] shadow-2xl rounded-full w-[95%] max-w-7xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="/" class="text-2xl font-bold text-white">KONEKTA</a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                        <a href="{{ route('features') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Features</a>
+                        <a href="{{ route('pricing') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Pricing</a>
+                        <a href="{{ route('about') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                        <a href="{{ route('contact') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Contact</a>
+                        <a href="{{ route('community') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Community</a>
+                    </div>
+
+                    <!-- Desktop Auth Buttons -->
+                    <div class="hidden sm:flex sm:items-center sm:space-x-4">
+                        <!-- Theme Toggle -->
+                        <button id="themeToggle" class="theme-toggle text-gray-200">
+                            <svg class="sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <svg class="moon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                        <a href="{{ route('login') }}" class="text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                            Sign in
+                        </a>
+                        <a href="{{ route('register') }}" class="bg-white hover:bg-gray-100 text-primary px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300">
+                            Get started
+                        </a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="sm:hidden flex items-center">
+                        <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="mobile-menu sm:hidden" id="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <a href="/" class="text-2xl font-bold text-white">KONEKTA</a>
+                        <button class="mobile-menu-close text-white">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-menu-links">
+                        <a href="{{ route('features') }}" class="text-white hover:text-gray-200">Features</a>
+                        <a href="{{ route('pricing') }}" class="text-white hover:text-gray-200">Pricing</a>
+                        <a href="{{ route('about') }}" class="text-white hover:text-gray-200">About</a>
+                        <a href="{{ route('contact') }}" class="text-white hover:text-gray-200">Contact</a>
+                        <a href="{{ route('community') }}" class="text-white hover:text-gray-200">Community</a>
+                    </div>
+                    <div class="mobile-menu-footer">
+                        <div class="flex flex-col space-y-4">
+                            <a href="{{ route('login') }}" class="text-white hover:text-gray-200 text-center py-2">Sign in</a>
+                            <a href="{{ route('register') }}" class="bg-white text-primary hover:bg-gray-100 text-center py-2 rounded-full">Get started</a>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Hero Section -->
+        <div class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="lg:w-1/2 space-y-8">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight whitespace-nowrap">
+                            Track Your Fleet with Precision
+                        </h1>
+                        <p class="text-xl text-gray-100 max-w-2xl">
+                            Real-time vehicle tracking and fleet management solutions for modern businesses.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary bg-white hover:bg-gray-100 transition-colors duration-300">
+                                Get Started
+                            </a>
+                            <a href="{{ route('features') }}" class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white/10 transition-colors duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="{{ asset('images/dashboard-preview.png') }}" alt="Dashboard Preview" class="w-full h-auto rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Add padding to the top of the main content to account for the fixed header -->
         <div class="pt-24">
@@ -387,21 +605,135 @@
                 addMessage(message, 'user');
                 input.value = '';
                 
-                // Simulate AI response (replace with actual AI integration)
+                // Show typing indicator
+                const typingIndicator = document.createElement('div');
+                typingIndicator.className = 'ai-message assistant typing-indicator';
+                typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+                document.getElementById('chatBody').appendChild(typingIndicator);
+                
+                // Scroll to bottom
+                const chatBody = document.getElementById('chatBody');
+                chatBody.scrollTop = chatBody.scrollHeight;
+                
+                // Process the message and generate response
                 setTimeout(() => {
-                    const responses = [
-                        "I can help you with information about our vehicle tracking solutions.",
-                        "Would you like to know more about our pricing plans?",
-                        "I can assist you with setting up your account or troubleshooting.",
-                        "Let me help you find the right tracking solution for your needs."
-                    ];
-                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                    addMessage(randomResponse, 'assistant');
-                }, 1000);
+                    // Remove typing indicator
+                    typingIndicator.remove();
+                    
+                    // Generate appropriate response based on message content
+                    let response = generateResponse(message);
+                    addMessage(response, 'assistant');
+                    
+                    // Scroll to bottom again
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }, 1500);
+            }
+        }
+
+        function generateResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Check for common keywords and provide relevant responses
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+                return "Hello! I'm your AI assistant. How can I help you with our vehicle tracking solutions today?";
+            } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('plan')) {
+                return "We offer flexible pricing plans to suit your needs. You can check our pricing page for detailed information. Would you like me to direct you there?";
+            } else if (lowerMessage.includes('feature') || lowerMessage.includes('track') || lowerMessage.includes('monitor')) {
+                return "Our platform offers real-time tracking, route optimization, geofencing, and driver behavior monitoring. Would you like to know more about any specific feature?";
+            } else if (lowerMessage.includes('help') || lowerMessage.includes('support')) {
+                return "I'm here to help! You can contact our support team through the contact page, or I can assist you with general questions about our services.";
+            } else if (lowerMessage.includes('account') || lowerMessage.includes('register') || lowerMessage.includes('sign up')) {
+                return "You can create an account by clicking the 'Get Started' button in the navigation menu. Would you like me to guide you through the registration process?";
+            } else {
+                return "I understand you're interested in " + message + ". Our vehicle tracking solutions can help optimize your fleet management. Would you like to know more about our specific features or pricing?";
             }
         }
 
         function addMessage(text, sender) {
             const chatBody = document.getElementById('chatBody');
             const messageDiv = document.createElement('div');
-            messageDiv.className = `ai-message ${sender}`
+            messageDiv.className = `ai-message ${sender}`;
+            messageDiv.textContent = text;
+            chatBody.appendChild(messageDiv);
+        }
+
+        // Add typing indicator styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .typing-indicator {
+                display: flex;
+                gap: 4px;
+                padding: 8px 12px;
+            }
+            .typing-indicator span {
+                width: 8px;
+                height: 8px;
+                background: #4a5d23;
+                border-radius: 50%;
+                animation: typing 1s infinite;
+            }
+            .typing-indicator span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .typing-indicator span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+            @keyframes typing {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-5px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Function to toggle theme
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        }
+
+        // Initialize theme
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else if (prefersDark) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        }
+
+        // Add event listener to theme toggle button
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    </script>
+</body>
+</html>
