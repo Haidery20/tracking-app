@@ -1,152 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KONEKTA - Your Gateway to Technology</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-xl font-bold text-gray-800">KONEKTA</div>
-                <div class="space-x-7">
-                    <a href="#" class="text-gray-600 hover:text-blue-500 transition">Home</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-500 transition">Articles</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-500 transition">Reviews</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-500 transition">Tutorials</a>
-                    <button class="btn-primary px-6 py-2">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </nav>
+@extends('layouts.landing')
 
+@section('content')
+<style>
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animate-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .typing-animation {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end) forwards infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+</style>
+
+<div class="relative">
     <!-- Hero Section -->
-    <section class="hero-section py-24 bg-hero-gradient">
-        <div class="container mx-auto px-4">
-            <div class="md:flex items-center justify-between">
-                <div class="md:w-1/2">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 animate-fade-in-up">
-                        Connect with Technology
-                    </h1>
-                    <p class="text-xl text-white/80 mb-12 animate-fade-in-up delay-200">
-                        Discover the latest tech trends, in-depth reviews, and expert tutorials to enhance your digital life.
-                    </p>
-                    <div class="space-y-4 animate-fade-in-up delay-400">
-                        <button class="btn-primary px-8 py-3 text-lg">Explore Now</button>
-                        <button class="btn-outline px-8 py-3 text-lg">Learn More</button>
-                    </div>
-                </div>
-                <div class="md:w-1/2 mt-8 md:mt-0">
-                    <div class="ai-widget p-8 bg-white/95 backdrop-filter-blur-md rounded-2xl shadow-md animate-slide-in delay-600">
-                        <div class="text-center mb-6">
-                            <i class="fas fa-laptop-code icon text-4xl text-gray-800"></i>
-                        </div>
-                        <h3 class="title text-center text-2xl font-bold mb-4">Tech Insights</h3>
-                        <p class="description text-center text-gray-600">
-                            Get real-time tech news and insights from our expert team.
+    <div class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span>KONEKTA:</span>
+                            <span class="typing-animation"> Connect, Create & <span class="text-primary">Conquer</span></span>
+                        </h1>
+                        <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Transform your fleet management with cutting-edge tracking solutions. Connect your vehicles, optimize operations, and conquer your industry with real-time insights.
                         </p>
-                        <div class="text-center">
-                            <button class="cta-button bg-gray-800 text-white px-8 py-3 text-lg rounded-full">Latest News</button>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary-dark md:py-4 md:text-lg md:px-10">
+                                    Get started
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="{{ route('contact') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                    Contact sales
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-secondary font-semibold tracking-wide uppercase">Features</h2>
+                <p class="feature-title mt-2 text-3xl leading-8 tracking-tight text-primary sm:text-4xl">
+                    Everything you need to manage your fleet
+                </p>
+                <p class="feature-description mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Powerful features to help you track, monitor, and optimize your vehicle fleet.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="feature-title text-lg leading-6 text-primary">Real-time Tracking</h3>
+                            <p class="feature-description mt-2 text-base text-gray-500">
+                                Monitor your vehicles in real-time with precise location data and detailed analytics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="feature-title text-lg leading-6 text-primary">Route Optimization</h3>
+                            <p class="feature-description mt-2 text-base text-gray-500">
+                                Optimize routes to reduce fuel costs and improve delivery times.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="feature-title text-lg leading-6 text-primary">Geofencing</h3>
+                            <p class="feature-description mt-2 text-base text-gray-500">
+                                Create virtual boundaries and receive alerts when vehicles enter or exit designated areas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="feature-title text-lg leading-6 text-primary">Driver Behavior</h3>
+                            <p class="feature-description mt-2 text-base text-gray-500">
+                                Monitor driver behavior and receive alerts for harsh braking, acceleration, and speeding.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Featured Articles Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16 animate-fade-in-up">Featured Articles</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card bg-white rounded-2xl shadow-md p-8 animate-fade-in-up delay-200">
-                    <div class="h-48 bg-gray-200 rounded-lg mb-6"></div>
-                    <h3 class="text-xl font-bold mb-4">The Future of AI: What Lies Ahead</h3>
-                    <p class="text-gray-600 mb-4">Explore the latest advancements in artificial intelligence and their impact on our future.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-700">Read More →</a>
-                </div>
-                <div class="feature-card bg-white rounded-2xl shadow-md p-8 animate-fade-in-up delay-400">
-                    <div class="h-48 bg-gray-200 rounded-lg mb-6"></div>
-                    <h3 class="text-xl font-bold mb-4">Quantum Computing: A New Era</h3>
-                    <p class="text-gray-600 mb-4">Dive into the world of quantum computing and its revolutionary potential.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-700">Read More →</a>
-                </div>
-                <div class="feature-card bg-white rounded-2xl shadow-md p-8 animate-fade-in-up delay-600">
-                    <div class="h-48 bg-gray-200 rounded-lg mb-6"></div>
-                    <h3 class="text-xl font-bold mb-4">Cybersecurity Best Practices</h3>
-                    <p class="text-gray-600 mb-4">Learn essential cybersecurity tips to protect your digital assets.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-700">Read More →</a>
+    <!-- Stats Section -->
+    <div class="bg-gray-50 pt-12 sm:pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="feature-title text-3xl sm:text-4xl">
+                    Trusted by businesses worldwide
+                </h2>
+                <p class="feature-description mt-3 text-xl text-gray-500 sm:mt-4">
+                    Join thousands of companies who trust our platform to manage their fleets.
+                </p>
+            </div>
+        </div>
+        <div class="mt-10 pb-12 bg-white sm:pb-16">
+            <div class="relative">
+                <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-4xl mx-auto">
+                        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                            <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
+                                    Vehicles Tracked
+                                </dt>
+                                <dd class="stat-number order-1 text-5xl text-secondary">
+                                    500+
+                                </dd>
+                            </div>
+                            <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
+                                    Fuel Cost Reduction
+                                </dt>
+                                <dd class="stat-number order-1 text-5xl text-secondary">
+                                    30%
+                                </dd>
+                            </div>
+                            <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
+                                    Support Available
+                                </dt>
+                                <dd class="stat-number order-1 text-5xl text-secondary">
+                                    24/7
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Tech Stats Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16 animate-fade-in-up">Why Choose KONEKTA</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="stats-card bg-white/10 backdrop-filter-blur-md rounded-2xl shadow-md p-8 animate-fade-in-up delay-200">
-                    <div class="number text-4xl font-bold text-white mb-4">1000+</div>
-                    <div class="label text-gray-400">Articles Published</div>
+    <!-- CTA Section -->
+    <div class="bg-secondary">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="cta-title text-3xl tracking-tight text-white sm:text-4xl">
+                <span class="block">Ready to get started?</span>
+                <span class="block text-primary">Start your free trial today.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="{{ route('register') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50">
+                        Get started
+                    </a>
                 </div>
-                <div class="stats-card bg-white/10 backdrop-filter-blur-md rounded-2xl shadow-md p-8 animate-fade-in-up delay-400">
-                    <div class="number text-4xl font-bold text-white mb-4">50+</div>
-                    <div class="label text-gray-400">Expert Writers</div>
-                </div>
-                <div class="stats-card bg-white/10 backdrop-filter-blur-md rounded-2xl shadow-md p-8 animate-fade-in-up delay-600">
-                    <div class="number text-4xl font-bold text-white mb-4">1M+</div>
-                    <div class="label text-gray-400">Monthly Readers</div>
+                <div class="ml-3 inline-flex rounded-md shadow">
+                    <a href="{{ route('contact') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
+                        Contact sales
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">KONEKTA</h3>
-                    <p class="text-gray-400">Your trusted source for technology news, reviews, and insights.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">About Us</a></li>
-                        <li><a href="#" class="hover:text-white">Contact</a></li>
-                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">AI & Machine Learning</a></li>
-                        <li><a href="#" class="hover:text-white">Cybersecurity</a></li>
-                        <li><a href="#" class="hover:text-white">Hardware</a></li>
-                        <li><a href="#" class="hover:text-white">Software</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Stay connected with our latest articles and insights.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-l text-gray-800">
-                        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-r hover:bg-blue-700">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 KONEKTA. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/your-code.js"></script>
-</body>
-</html>
+    </div>
+</div>
+@endsection
