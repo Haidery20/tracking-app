@@ -181,10 +181,10 @@
                             </div>
                             <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                                 <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Support Available
+                                    Page Views
                                 </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    24/7
+                                <dd class="stat-number order-1 text-5xl text-secondary" id="pageViews">
+                                    Loading...
                                 </dd>
                             </div>
                         </dl>
@@ -193,27 +193,30 @@
             </div>
         </div>
     </div>
-
-    <!-- CTA Section -->
-    <div class="bg-secondary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="cta-title text-3xl tracking-tight text-white sm:text-4xl">
-                <span class="block">Ready to get started?</span>
-                <span class="block text-primary">Start your free trial today.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50">
-                        Get started
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('contact') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
-                        Contact sales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+
+@push('scripts')
+<script>
+    // Function to update the counter
+    function updateCounter() {
+        fetch('/get-views')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('pageViews').textContent = data.views;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Increment counter when page loads
+    fetch('/increment-views')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('pageViews').textContent = data.views;
+        })
+        .catch(error => console.error('Error:', error));
+
+    // Update counter every 30 seconds
+    setInterval(updateCounter, 30000);
+</script>
+@endpush
 @endsection

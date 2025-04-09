@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PageViewController;
 use Inertia\Inertia;
 
 // Main Pages
@@ -31,6 +32,10 @@ Route::get('/about', function () {
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/community', function () {
+    return view('community');
+})->name('community');
 
 // Authentication Routes
 Route::get('/login', function () {
@@ -55,3 +60,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('/user/{id}', [DashboardController::class, 'deleteUser'])->name('admin.user.delete');
     Route::patch('/user/{id}/status', [DashboardController::class, 'updateUserStatus'])->name('admin.user.status');
 });
+
+Route::get('/increment-views', [PageViewController::class, 'incrementHomepageViews']);
+Route::get('/get-views', [PageViewController::class, 'getHomepageViews']);

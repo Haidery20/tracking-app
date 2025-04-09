@@ -17,15 +17,18 @@
 <div class="min-h-screen bg-gray-50">
     <!-- Hero Section -->
     <div class="relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80"></div>
+        </div>
         <div class="max-w-7xl mx-auto">
             <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                 <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                             <span class="block">About</span>
-                            <span class="block text-primary">KONEKTA</span>
+                            <span class="block text-secondary">KONEKTA</span>
                         </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        <p class="mt-3 text-base text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                             We're revolutionizing vehicle tracking and fleet management with cutting-edge technology and exceptional service.
                         </p>
                     </div>
@@ -40,38 +43,79 @@
             <div class="lg:text-center">
                 <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Our Mission</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Empowering Businesses Through Smart Tracking
+                    Empowering Businesses Through Smart Digital Solutions
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    We're committed to providing reliable, efficient, and innovative tracking solutions that help businesses optimize their operations and maximize their potential.
+                To empower businesses with reliable digital tools web hosting, design, and communication solutions using modern technology and smart methods. We aim to make digital access simple, affordable, and effective for everyone.
                 </p>
             </div>
         </div>
     </div>
 
     <!-- Stats Section -->
-    <div class="bg-primary py-12">
+    <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-white">1000+</div>
-                    <div class="mt-2 text-lg text-gray-200">Active Vehicles</div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="1000">500+</div>
+                    <div class="mt-2 text-lg text-gray-600">Active Vehicles</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-white">50+</div>
-                    <div class="mt-2 text-lg text-gray-200">Enterprise Clients</div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="50">50+</div>
+                    <div class="mt-2 text-lg text-gray-600">Enterprise Clients</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-white">99.9%</div>
-                    <div class="mt-2 text-lg text-gray-200">Uptime</div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="99.9">99.9%</div>
+                    <div class="mt-2 text-lg text-gray-600">Uptime</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-white">24/7</div>
-                    <div class="mt-2 text-lg text-gray-200">Support</div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="24">24/7</div>
+                    <div class="mt-2 text-lg text-gray-600">Support</div>
                 </div>
             </div>
         </div>
     </div>
+
+    @push('scripts')
+    <script>
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.5
+        });
+
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+    </script>
+    @endpush
 
     <!-- Values Section -->
     <div class="py-12 bg-white">
@@ -128,7 +172,7 @@
                     <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg">
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Team member" class="h-48 w-48 object-cover rounded-full mx-auto">
                     </div>
-                    <h3 class="mt-6 text-lg font-medium text-gray-900 text-center">John Doe</h3>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900 text-center">Maryln Jerry</h3>
                     <p class="text-primary text-center">CEO & Founder</p>
                     <p class="mt-2 text-gray-500 text-center">Visionary leader with 15+ years of experience in fleet management technology.</p>
                 </div>
@@ -136,8 +180,8 @@
                     <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Team member" class="h-48 w-48 object-cover rounded-full mx-auto">
                     </div>
-                    <h3 class="mt-6 text-lg font-medium text-gray-900 text-center">Jane Smith</h3>
-                    <p class="text-primary text-center">CTO</p>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900 text-center">Haidery Shango</h3>
+                    <p class="text-primary text-center">CTO & Co-Founder</p>
                     <p class="mt-2 text-gray-500 text-center">Technology expert specializing in GPS tracking and IoT solutions.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -147,28 +191,6 @@
                     <h3 class="mt-6 text-lg font-medium text-gray-900 text-center">Mike Johnson</h3>
                     <p class="text-primary text-center">Head of Operations</p>
                     <p class="mt-2 text-gray-500 text-center">Operations specialist with extensive experience in fleet management.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="bg-primary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-                <span class="block">Ready to get started?</span>
-                <span class="block text-secondary">Join us today.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
-                        Get Started
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('contact') }}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary/50 hover:bg-primary/60">
-                        Contact Us
-                    </a>
                 </div>
             </div>
         </div>
