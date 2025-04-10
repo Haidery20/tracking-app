@@ -156,49 +156,61 @@
     </div>
 
     <!-- Stats Section -->
-    <div class="bg-gray-50 pt-12 sm:pt-16">
+    <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="feature-title text-3xl sm:text-4xl">
-                    Trusted by businesses worldwide
-                </h2>
-                <p class="feature-description mt-3 text-xl text-gray-500 sm:mt-4">
-                    Join thousands of companies who trust our platform to manage their fleets.
-                </p>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="1000">500+</div>
+                    <div class="mt-2 text-lg text-gray-600">Active Vehicles</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="50">50+</div>
+                    <div class="mt-2 text-lg text-gray-600">Enterprise Clients</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="99.9">99.9%</div>
+                    <div class="mt-2 text-lg text-gray-600">Uptime</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="24">24/7</div>
+                    <div class="mt-2 text-lg text-gray-600">Support</div>
+                </div>
             </div>
         </div>
-        <div class="mt-10 pb-12 bg-white sm:pb-16">
-            <div class="relative">
-                <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
-                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="max-w-4xl mx-auto">
-                        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                            <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Vehicles Tracked
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    500+
-                                </dd>
-                            </div>
-                            <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Fuel Cost Reduction
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    30%
-                                </dd>
-                            </div>
-                            <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Page Views
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary" id="pageViews">
-                                    Loading...
-                                </dd>
-                            </div>
-                        </dl>
-                    </div>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-2xl font-semibold text-primary tracking-wide uppercase mb-4">
+                    Trusted Partners
+                </h2>
+                <p class="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                    Our Partners
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
+                <!-- Partner 1 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/evmak-logo.png') }}" alt="EVMak">
+                </div>
+                <!-- Partner 2 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/tcra-logo.png') }}" alt="TCRA">
+                </div>
+                <!-- Partner 3 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/digifarm-logo.png') }}" alt="Digi Farm">
+                </div>
+                <!-- Partner 4 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/crdb-logo.png') }}" alt="CRDB Bank">
+                </div>
+                <!-- Partner 5 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/nbc-logo.png') }}" alt="NBC Bank">
                 </div>
             </div>
         </div>

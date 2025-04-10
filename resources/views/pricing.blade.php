@@ -227,7 +227,7 @@
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary">
                     <div class="px-6 py-8">
                         <div class="absolute top-0 right-0 -mt-4 -mr-4">
-                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full">
+                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
                                 Most Popular
                             </span>
                         </div>
@@ -366,7 +366,7 @@
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary">
                     <div class="px-6 py-8">
                         <div class="absolute top-0 right-0 -mt-4 -mr-4">
-                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full">
+                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
                                 Most Popular
                             </span>
                         </div>
@@ -457,32 +457,77 @@
     </div>
 
     <!-- FAQ Section -->
-    <div class="mt-24">
-        <div class="text-center">
-            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Frequently Asked Questions
-            </h2>
-            <p class="mt-4 text-lg text-gray-500">
-                Everything you need to know about our services.
-            </p>
-        </div>
+    <div class="mt-24 bg-gradient-to-b from-gray-50 to-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Frequently Asked Questions
+                </h2>
+                <p class="mt-4 text-lg text-gray-500">
+                    Everything you need to know about our services.
+                </p>
+            </div>
 
-        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                <h3 class="text-lg font-medium text-gray-900">Can I upgrade my plan later?</h3>
-                <p class="mt-2 text-gray-500">Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                <h3 class="text-lg font-medium text-gray-900">Do you offer refunds?</h3>
-                <p class="mt-2 text-gray-500">Yes, we offer a 30-day money-back guarantee for our hosting and web design services. SMS credits are non-refundable.</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                <h3 class="text-lg font-medium text-gray-900">Do you offer discounts?</h3>
-                <p class="mt-2 text-gray-500">Yes, we offer discounts for annual subscriptions and non-profit organizations. Contact our sales team for more information.</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                <h3 class="text-lg font-medium text-gray-900">What payment methods do you accept?</h3>
-                <p class="mt-2 text-gray-500">We accept all major credit cards, PayPal, and bank transfers for enterprise customers.</p>
+            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                @foreach([
+                    [
+                        'question' => 'Can I upgrade my plan later?',
+                        'answer' => 'Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.',
+                        'icon' => 'fas fa-arrow-up'
+                    ],
+                    [
+                        'question' => 'Do you offer refunds?',
+                        'answer' => 'Yes, we offer a 30-day money-back guarantee for our hosting and web design services. SMS credits are non-refundable.',
+                        'icon' => 'fas fa-money-bill-wave'
+                    ],
+                    [
+                        'question' => 'Do you offer discounts?',
+                        'answer' => 'Yes, we offer discounts for annual subscriptions and non-profit organizations. Contact our sales team for more information.',
+                        'icon' => 'fas fa-percentage'
+                    ],
+                    [
+                        'question' => 'What payment methods do you accept?',
+                        'answer' => 'We accept all major credit cards, PayPal, and bank transfers for enterprise customers.',
+                        'icon' => 'fas fa-credit-card'
+                    ]
+                ] as $faq)
+                @php
+                    $bgColors = [
+                        'from-blue-50 to-blue-100',
+                        'from-green-50 to-green-100',
+                        'from-purple-50 to-purple-100',
+                        'from-yellow-50 to-yellow-100'
+                    ];
+                    $iconColors = [
+                        'text-blue-500',
+                        'text-green-500',
+                        'text-purple-500',
+                        'text-yellow-500'
+                    ];
+                @endphp
+
+                <div class="relative bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="absolute -top-4 -left-4 bg-white rounded-full p-2 shadow-lg">
+                        <i class="{{ $faq['icon'] }} {{ $iconColors[array_rand($iconColors)] }} text-xl"></i>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-gray-900">
+                            {{ $faq['question'] }}
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            {{ $faq['answer'] }}
+                        </p>
+                    </div>
+
+                    <div class="mt-6 border-t border-gray-200 pt-4">
+                        <button class="inline-flex items-center text-sm font-medium text-primary hover:text-primary-dark transition-colors duration-300">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>

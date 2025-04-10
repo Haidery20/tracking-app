@@ -28,6 +28,11 @@
                 <!-- Real-time Tracking -->
                 <div class="relative">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <!-- Real-time Tracking section -->
+
+                        <div class="lg:col-start-1 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1623282033815-40b05d96c903?w=800&h=600&fit=crop" alt="Real-time Vehicle Tracking" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-2">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Real-time Tracking
@@ -66,6 +71,9 @@
                 <!-- Route Optimization -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <div class="lg:col-start-2 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&h=600&fit=crop" alt="Route Optimization" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-1">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Route Optimization
@@ -104,6 +112,10 @@
                 <!-- Geofencing -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <!-- Geofencing section -->
+                        <div class="lg:col-start-1 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=800&h=600&fit=crop" alt="Geofencing" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-2">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Geofencing
@@ -142,6 +154,9 @@
                 <!-- Driver Behavior -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <div class="lg:col-start-2 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop" alt="Driver Behavior Analysis" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-1">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Driver Behavior
@@ -211,6 +226,80 @@
     .feature-description:hover {
         opacity: 0.8;
     }
+
+    .feature-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .feature-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 </style>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.relative');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        sections.forEach(section => {
+            section.classList.add('feature-section');
+            observer.observe(section);
+        });
+    });
+</script>
+
 @endsection
+
+<!-- Real-time Tracking section -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </svg>
+</div>
+
+<!-- Historical Data section -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+    </svg>
+</div>
+
+<!-- Safety Monitoring icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-purple-400 to-purple-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+    </svg>
+</div>
+
+<!-- Performance Reports icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </svg>
+</div>
+
+<!-- Custom Zones icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm3 8h-6v-1h1v-2h1v2h2v-4h1v4h1v1z"/>
+    </svg>
+</div>
+
+<!-- Instant Alerts icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+    </svg>
+</div>
