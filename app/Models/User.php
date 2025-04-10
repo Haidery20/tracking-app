@@ -84,4 +84,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(AlertSetting::class);
     }
+
+    /**
+     * Get the usage that the user owns.
+     */
+    public function usage()
+    {
+        return $this->hasOne(Usage::class);
+    }
 }

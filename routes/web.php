@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageViewController;
+use App\Http\Controllers\Auth\PasswordResetController;
 use Inertia\Inertia;
 
 // Main Pages
@@ -38,12 +39,17 @@ Route::get('/community', function () {
 })->name('community');
 
 // Authentication Routes
-Route::get('/login', function () {
-    return Inertia::render('Auth/Login');
-})->name('login');
-
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'show'])->name('register');
-Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
+Route::post('/register', [RegisterController::class, 'register']);
+
+// Password Reset Routes
+Route::get('/password/reset', [PasswordResetController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('/password/email', [PasswordResetController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('/password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
+Route::post('/password/reset', [PasswordResetController::class, 'reset'])->name('password.update');
 
 // Dashboard Routes
 Route::middleware(['auth'])->group(function () {
