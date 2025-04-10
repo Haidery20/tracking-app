@@ -12,6 +12,7 @@ import Blog from './Pages/Blog.jsx';
 import Careers from './Pages/Careers.jsx';
 import Docs from './Pages/Docs.jsx';
 import Support from './Pages/Support.jsx';
+import HeroSection from './components/HeroSection';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -55,21 +56,24 @@ if (!container) {
     console.log('App.jsx: Rendering app...');
     root.render(
         <React.StrictMode>
-            <ErrorBoundary>
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/pricing" element={<Pricing />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/blog" element={<Blog />} />
-                        <Route path="/careers" element={<Careers />} />
-                        <Route path="/docs" element={<Docs />} />
-                        <Route path="/support" element={<Support />} />
-                    </Routes>
-                </BrowserRouter>
-            </ErrorBoundary>
+            <BrowserRouter>
+                <ErrorBoundary>
+                    <div className="app">
+                        <HeroSection />
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/services" element={<Services />} />
+                            <Route path="/pricing" element={<Pricing />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/blog" element={<Blog />} />
+                            <Route path="/careers" element={<Careers />} />
+                            <Route path="/docs" element={<Docs />} />
+                            <Route path="/support" element={<Support />} />
+                        </Routes>
+                    </div>
+                </ErrorBoundary>
+            </BrowserRouter>
         </React.StrictMode>
     );
     console.log('App.jsx: Render complete!');

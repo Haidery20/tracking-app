@@ -11,6 +11,7 @@ use Database\Seeders\UsersSeeder;
 use Database\Seeders\DevicesSeeder;
 use Database\Seeders\GeofencesSeeder;
 use Database\Seeders\AlertSettingsSeeder;
+use Database\Seeders\TestUsersSeeder;
 use App\Models\Device;
 use App\Models\Geofence;
 use App\Models\AlertSetting;
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
             DevicesSeeder::class,
             GeofencesSeeder::class,
             AlertSettingsSeeder::class,
+            TestUsersSeeder::class,
         ]);
 
         // Create admin user

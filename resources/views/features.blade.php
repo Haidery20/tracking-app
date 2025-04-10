@@ -28,6 +28,11 @@
                 <!-- Real-time Tracking -->
                 <div class="relative">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <!-- Real-time Tracking section -->
+
+                        <div class="lg:col-start-1 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1623282033815-40b05d96c903?w=800&h=600&fit=crop" alt="Real-time Vehicle Tracking" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-2">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Real-time Tracking
@@ -38,10 +43,8 @@
                             <dl class="mt-10 space-y-10">
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white feature-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Live Location Updates</p>
                                     </dt>
@@ -51,10 +54,8 @@
                                 </div>
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white feature-icon">
+                                            <i class="fas fa-history"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Historical Data</p>
                                     </dt>
@@ -70,6 +71,9 @@
                 <!-- Route Optimization -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <div class="lg:col-start-2 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&h=600&fit=crop" alt="Route Optimization" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-1">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Route Optimization
@@ -80,28 +84,24 @@
                             <dl class="mt-10 space-y-10">
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
                                         </div>
-                                        <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Smart Routing</p>
+                                        <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Safety Monitoring</p>
                                     </dt>
                                     <dd class="feature-description mt-2 ml-16 text-base text-gray-500">
-                                        Automatically calculate the most efficient routes based on traffic, weather, and delivery windows.
+                                        Track harsh braking, acceleration, and speeding to improve driver safety.
                                     </dd>
                                 </div>
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white feature-icon">
+                                            <i class="fas fa-chart-bar"></i>
                                         </div>
-                                        <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Fuel Savings</p>
+                                        <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Performance Reports</p>
                                     </dt>
                                     <dd class="feature-description mt-2 ml-16 text-base text-gray-500">
-                                        Reduce fuel costs by up to 30% with optimized routes and efficient driving patterns.
+                                        Generate detailed reports on driver performance and behavior patterns.
                                     </dd>
                                 </div>
                             </dl>
@@ -112,6 +112,10 @@
                 <!-- Geofencing -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <!-- Geofencing section -->
+                        <div class="lg:col-start-1 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=800&h=600&fit=crop" alt="Geofencing" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-2">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Geofencing
@@ -122,10 +126,8 @@
                             <dl class="mt-10 space-y-10">
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white feature-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Custom Zones</p>
                                     </dt>
@@ -135,10 +137,8 @@
                                 </div>
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white feature-icon">
+                                            <i class="fas fa-history"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Instant Alerts</p>
                                     </dt>
@@ -154,6 +154,9 @@
                 <!-- Driver Behavior -->
                 <div class="relative mt-12 sm:mt-16 lg:mt-24">
                     <div class="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                        <div class="lg:col-start-2 mb-8 lg:mb-0">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop" alt="Driver Behavior Analysis" class="rounded-lg shadow-xl w-full h-auto">
+                        </div>
                         <div class="lg:col-start-1">
                             <h3 class="feature-title text-2xl font-extrabold text-primary tracking-tight sm:text-3xl">
                                 Driver Behavior
@@ -164,10 +167,8 @@
                             <dl class="mt-10 space-y-10">
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white feature-icon">
+                                            <i class="fas fa-shield-alt"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Safety Monitoring</p>
                                     </dt>
@@ -177,10 +178,8 @@
                                 </div>
                                 <div class="relative">
                                     <dt>
-                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                                            </svg>
+                                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white feature-icon">
+                                            <i class="fas fa-chart-bar"></i>
                                         </div>
                                         <p class="feature-title ml-16 text-lg leading-6 font-medium text-primary">Performance Reports</p>
                                     </dt>
@@ -195,27 +194,112 @@
             </div>
         </div>
     </div>
-
-    <!-- CTA Section -->
-    <div class="bg-secondary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="cta-title text-3xl tracking-tight text-white sm:text-4xl">
-                <span class="block">Ready to get started?</span>
-                <span class="block text-primary">Start your free trial today.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50">
-                        Get started
-                    </a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('contact') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
-                        Contact sales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+
+<style>
+    .feature-icon {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-icon i {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .feature-icon:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-title {
+        transition: color 0.3s ease;
+    }
+
+    .feature-title:hover {
+        color: #4F46E5;
+    }
+
+    .feature-description {
+        transition: opacity 0.3s ease;
+    }
+
+    .feature-description:hover {
+        opacity: 0.8;
+    }
+
+    .feature-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .feature-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.relative');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        sections.forEach(section => {
+            section.classList.add('feature-section');
+            observer.observe(section);
+        });
+    });
+</script>
+
 @endsection
+
+<!-- Real-time Tracking section -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </svg>
+</div>
+
+<!-- Historical Data section -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+    </svg>
+</div>
+
+<!-- Safety Monitoring icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-purple-400 to-purple-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+    </svg>
+</div>
+
+<!-- Performance Reports icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-orange-400 to-orange-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </svg>
+</div>
+
+<!-- Custom Zones icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm3 8h-6v-1h1v-2h1v2h2v-4h1v4h1v1z"/>
+    </svg>
+</div>
+
+<!-- Instant Alerts icon -->
+<div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-r from-green-400 to-green-600 text-white feature-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+    </svg>
+</div>

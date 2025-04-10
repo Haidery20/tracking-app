@@ -29,19 +29,29 @@
         display: inline-block;
         overflow: hidden;
         white-space: nowrap;
-        animation: typing 3.5s steps(40, end) forwards infinite;
+        animation: typing 3.5s steps(35, end) forwards infinite;
     }
 
     @keyframes typing {
         from { width: 0 }
         to { width: 100% }
     }
+
+    .hero-gradient {
+        background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--secondary-rgb), 0.1) 100%);
+    }
+
+    .hero-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
 </style>
 
 <div class="relative">
     <!-- Hero Section -->
     <div class="relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="relative max-w-7xl mx-auto">
             <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                 <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">
@@ -70,7 +80,7 @@
         </div>
     </div>
 
-    <!-- Features Section -->
+     <!-- Features Section -->
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
@@ -146,74 +156,89 @@
     </div>
 
     <!-- Stats Section -->
-    <div class="bg-gray-50 pt-12 sm:pt-16">
+    <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="feature-title text-3xl sm:text-4xl">
-                    Trusted by businesses worldwide
-                </h2>
-                <p class="feature-description mt-3 text-xl text-gray-500 sm:mt-4">
-                    Join thousands of companies who trust our platform to manage their fleets.
-                </p>
-            </div>
-        </div>
-        <div class="mt-10 pb-12 bg-white sm:pb-16">
-            <div class="relative">
-                <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
-                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="max-w-4xl mx-auto">
-                        <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                            <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Vehicles Tracked
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    500+
-                                </dd>
-                            </div>
-                            <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Fuel Cost Reduction
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    30%
-                                </dd>
-                            </div>
-                            <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-                                <dt class="stat-label order-2 mt-2 text-lg leading-6 text-gray-500">
-                                    Support Available
-                                </dt>
-                                <dd class="stat-number order-1 text-5xl text-secondary">
-                                    24/7
-                                </dd>
-                            </div>
-                        </dl>
-                    </div>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="1000">500+</div>
+                    <div class="mt-2 text-lg text-gray-600">Active Vehicles</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="50">50+</div>
+                    <div class="mt-2 text-lg text-gray-600">Enterprise Clients</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="99.9">99.9%</div>
+                    <div class="mt-2 text-lg text-gray-600">Uptime</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                    <div class="text-4xl font-bold text-primary counter" data-target="24">24/7</div>
+                    <div class="mt-2 text-lg text-gray-600">Support</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- CTA Section -->
-    <div class="bg-secondary">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-            <h2 class="cta-title text-3xl tracking-tight text-white sm:text-4xl">
-                <span class="block">Ready to get started?</span>
-                <span class="block text-primary">Start your free trial today.</span>
-            </h2>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-secondary bg-white hover:bg-gray-50">
-                        Get started
-                    </a>
+    <!-- Partners Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-2xl font-semibold text-primary tracking-wide uppercase mb-4">
+                    Trusted Partners
+                </h2>
+                <p class="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+                    Our Partners
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
+                <!-- Partner 1 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/evmak-logo.png') }}" alt="EVMak">
                 </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('contact') }}" class="cta-button inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
-                        Contact sales
-                    </a>
+                <!-- Partner 2 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/tcra-logo.png') }}" alt="TCRA">
+                </div>
+                <!-- Partner 3 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/digifarm-logo.png') }}" alt="Digi Farm">
+                </div>
+                <!-- Partner 4 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/crdb-logo.png') }}" alt="CRDB Bank">
+                </div>
+                <!-- Partner 5 -->
+                <div class="flex justify-center">
+                    <img class="h-16 w-auto" src="{{ asset('images/partners/nbc-logo.png') }}" alt="NBC Bank">
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@push('scripts')
+<script>
+    // Function to update the counter
+    function updateCounter() {
+        fetch('/get-views')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('pageViews').textContent = data.views;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Increment counter when page loads
+    fetch('/increment-views')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('pageViews').textContent = data.views;
+        })
+        .catch(error => console.error('Error:', error));
+
+    // Update counter every 30 seconds
+    setInterval(updateCounter, 30000);
+</script>
+@endpush
 @endsection
