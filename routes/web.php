@@ -42,9 +42,8 @@ Route::get('/login', function () {
     return Inertia::render('Auth/Login');
 })->name('login');
 
-Route::get('/register', function () {
-    return Inertia::render('Auth/Register');
-})->name('register');
+Route::get('/register', [RegisterController::class, 'show'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 
 // Dashboard Routes
 Route::middleware(['auth'])->group(function () {
