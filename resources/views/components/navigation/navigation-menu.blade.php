@@ -17,8 +17,8 @@
                         <x-navigation.responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                             {{ __('Home') }}
                         </x-navigation.responsive-nav-link>
-                        <x-navigation.responsive-nav-link :href="route('features')" :active="request()->routeIs('features')">
-                            {{ __('Features') }}
+                        <x-navigation.responsive-nav-link :href="route('services')" :active="request()->routeIs('services')">
+                            {{ __('Services') }}
                         </x-navigation.responsive-nav-link>
                         <x-navigation.responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
                             {{ __('Pricing') }}
@@ -95,8 +95,8 @@
             <x-navigation.responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                 {{ __('Home') }}
             </x-navigation.responsive-nav-link>
-            <x-navigation.responsive-nav-link :href="route('features')" :active="request()->routeIs('features')">
-                {{ __('Features') }}
+            <x-navigation.responsive-nav-link :href="route('services')" :active="request()->routeIs('services')">
+                {{ __('Services') }}
             </x-navigation.responsive-nav-link>
             <x-navigation.responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
                 {{ __('Pricing') }}

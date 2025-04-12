@@ -10,7 +10,7 @@
                 <!-- Left side - Form -->
                 <div class="p-8 lg:p-12">
                     <div class="text-center lg:text-left mb-8">
-                        <h2 class="text-3xl font-bold text-gray-900">Create Your Account</h2>
+                        <h2 class="text-3xl font-bold text-primary">Create Your Account</h2>
                         <p class="mt-2 text-sm text-gray-600">Join KONEKTA and start tracking your projects today</p>
                     </div>
 
@@ -18,7 +18,7 @@
                         @csrf
                         
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <label for="name" class="block text-sm font-medium text-primary">Full Name</label>
                             <div class="mt-1">
                                 <input type="text" id="name" name="name" required 
                                     class="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-primary focus:border-primary transition duration-150">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <label for="email" class="block text-sm font-medium text-primary">Email Address</label>
                             <div class="mt-1">
                                 <input type="email" id="email" name="email" required 
                                     class="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-primary focus:border-primary transition duration-150">
@@ -34,7 +34,7 @@
                         </div>
 
                         <div>
-                            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                            <label for="password" class="block text-sm font-medium text-primary">Password</label>
                             <div class="mt-1">
                                 <input type="password" id="password" name="password" required 
                                     class="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-primary focus:border-primary transition duration-150">
@@ -42,7 +42,7 @@
                         </div>
 
                         <div>
-                            <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                            <label for="password_confirmation" class="block text-sm font-medium text-primary">Confirm Password</label>
                             <div class="mt-1">
                                 <input type="password" id="password_confirmation" name="password_confirmation" required 
                                     class="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-primary focus:border-primary transition duration-150">
@@ -60,11 +60,9 @@
                                     <div class="ml-3">
                                         <h3 class="text-sm font-medium text-red-800">There were errors with your submission</h3>
                                         <div class="mt-2 text-sm text-red-700">
-                                            <ul class="list-disc pl-5 space-y-1">
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
+                                            @foreach ($errors->all() as $error)
+                                                <p>{{ $error }}</p>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +72,7 @@
                         <div class="flex items-center">
                             <input type="checkbox" id="terms" name="terms" required 
                                 class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
-                            <label for="terms" class="ml-2 block text-sm text-gray-700">
+                            <label for="terms" class="ml-2 block text-sm text-primary">
                                 I agree to the 
                                 <a href="#" class="font-medium text-primary hover:text-primary/80">Terms of Service</a> 
                                 and 

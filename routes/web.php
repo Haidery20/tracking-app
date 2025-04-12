@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('landing');
 })->name('landing');
 
+Route::get('/services', function () {
+    return view('services');
+})->name('services');
+
 Route::get('/features', function () {
     return view('features');
 })->name('features');

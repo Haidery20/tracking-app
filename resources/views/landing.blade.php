@@ -25,18 +25,6 @@
         animation-delay: 400ms;
     }
 
-    .typing-animation {
-        display: inline-block;
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 3.5s steps(35, end) forwards infinite;
-    }
-
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-
     .hero-gradient {
         background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--secondary-rgb), 0.1) 100%);
     }
@@ -56,20 +44,19 @@
                 <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="sm:text-center lg:text-left">
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span>KONEKTA:</span>
-                            <span class="typing-animation"> Connect, Create & <span class="text-primary">Conquer</span></span>
+                            KONEKTA: Connect, Create & <span class="text-primary">Conquer</span>
                         </h1>
                         <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                             Transform your fleet management with cutting-edge tracking solutions. Connect your vehicles, optimize operations, and conquer your industry with real-time insights.
                         </p>
                         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                             <div class="rounded-md shadow">
-                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary-dark md:py-4 md:text-lg md:px-10">
+                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 md:py-4 md:text-lg md:px-10">
                                     Get started
                                 </a>
                             </div>
                             <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="{{ route('contact') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                <a href="{{ route('contact') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-100 md:py-4 md:text-lg md:px-10">
                                     Contact sales
                                 </a>
                             </div>
@@ -80,77 +67,69 @@
         </div>
     </div>
 
-     <!-- Features Section -->
-    <div class="py-12 bg-white">
+    <!-- Services Section -->
+    <div class="py-12 bg-gradient-to-br from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-base text-secondary font-semibold tracking-wide uppercase">Features</h2>
-                <p class="feature-title mt-2 text-3xl leading-8 tracking-tight text-primary sm:text-4xl">
-                    Everything you need to manage your fleet
-                </p>
-                <p class="feature-description mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Powerful features to help you track, monitor, and optimize your vehicle fleet.
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
+                    Our Services
+                </h2>
+                <p class="mt-4 text-lg text-gray-500">
+                    Discover our comprehensive digital solutions designed to help your business grow and succeed online.
                 </p>
             </div>
 
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Web Hosting -->
+                <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <i class="fas fa-cloud text-xl"></i>
                         </div>
-                        <div class="ml-16">
-                            <h3 class="feature-title text-lg leading-6 text-primary">Real-time Tracking</h3>
-                            <p class="feature-description mt-2 text-base text-gray-500">
-                                Monitor your vehicles in real-time with precise location data and detailed analytics.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <div class="ml-16">
-                            <h3 class="feature-title text-lg leading-6 text-primary">Route Optimization</h3>
-                            <p class="feature-description mt-2 text-base text-gray-500">
-                                Optimize routes to reduce fuel costs and improve delivery times.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <div class="ml-16">
-                            <h3 class="feature-title text-lg leading-6 text-primary">Geofencing</h3>
-                            <p class="feature-description mt-2 text-base text-gray-500">
-                                Create virtual boundaries and receive alerts when vehicles enter or exit designated areas.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                        </div>
-                        <div class="ml-16">
-                            <h3 class="feature-title text-lg leading-6 text-primary">Driver Behavior</h3>
-                            <p class="feature-description mt-2 text-base text-gray-500">
-                                Monitor driver behavior and receive alerts for harsh braking, acceleration, and speeding.
-                            </p>
-                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                            Web Hosting
+                        </h3>
+                        <p class="text-gray-500">
+                            Reliable and secure hosting solutions with enterprise-grade infrastructure.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Web Design -->
+                <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <i class="fas fa-desktop text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                            Web Design
+                        </h3>
+                        <p class="text-gray-500">
+                            Custom, responsive websites that engage your audience and drive conversions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SMS Bulk -->
+                <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white mb-4">
+                            <i class="fas fa-comment-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                            SMS Bulk
+                        </h3>
+                        <p class="text-gray-500">
+                            Powerful SMS marketing platform for effective business communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="{{ route('services') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-secondary-dark">
+                    View All Services
+                </a>
             </div>
         </div>
     </div>
@@ -191,26 +170,46 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
-                <!-- Partner 1 -->
-                <div class="flex justify-center">
-                    <img class="h-16 w-auto" src="{{ asset('images/partners/evmak-logo.png') }}" alt="EVMak">
-                </div>
-                <!-- Partner 2 -->
-                <div class="flex justify-center">
-                    <img class="h-16 w-auto" src="{{ asset('images/partners/tcra-logo.png') }}" alt="TCRA">
-                </div>
-                <!-- Partner 3 -->
-                <div class="flex justify-center">
-                    <img class="h-16 w-auto" src="{{ asset('images/partners/digifarm-logo.png') }}" alt="Digi Farm">
-                </div>
-                <!-- Partner 4 -->
-                <div class="flex justify-center">
-                    <img class="h-16 w-auto" src="{{ asset('images/partners/crdb-logo.png') }}" alt="CRDB Bank">
-                </div>
-                <!-- Partner 5 -->
-                <div class="flex justify-center">
-                    <img class="h-16 w-auto" src="{{ asset('images/partners/nbc-logo.png') }}" alt="NBC Bank">
+            <div class="overflow-x-hidden pb-4">
+                <div class="partners-container relative">
+                    <div class="partners-wrapper flex space-x-8 min-w-full">
+                        <!-- Partner 1 -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/2c3e50/ffffff?text=EVMak" alt="EVMak">
+                        </div>
+                        <!-- Partner 2 -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/3498db/ffffff?text=TCRA" alt="TCRA">
+                        </div>
+                        <!-- Partner 3 -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/2ecc71/ffffff?text=Digi+Farm" alt="Digi Farm">
+                        </div>
+                        <!-- Partner 4 -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/e74c3c/ffffff?text=CRDB+Bank" alt="CRDB Bank">
+                        </div>
+                        <!-- Partner 5 -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/9b59b6/ffffff?text=NBC+Bank" alt="NBC Bank">
+                        </div>
+                        <!-- Duplicate partners for continuous scrolling -->
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/2c3e50/ffffff?text=EVMak" alt="EVMak">
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/3498db/ffffff?text=TCRA" alt="TCRA">
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/2ecc71/ffffff?text=Digi+Farm" alt="Digi Farm">
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/e74c3c/ffffff?text=CRDB+Bank" alt="CRDB Bank">
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-16 w-auto" src="https://via.placeholder.com/200x80/9b59b6/ffffff?text=NBC+Bank" alt="NBC Bank">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,6 +238,37 @@
 
     // Update counter every 30 seconds
     setInterval(updateCounter, 30000);
+
+    // Partners scrolling animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const partnersWrapper = document.querySelector('.partners-wrapper');
+        const partnersContainer = document.querySelector('.partners-container');
+        
+        function scrollPartners() {
+            if (partnersWrapper.scrollWidth > partnersContainer.clientWidth) {
+                partnersWrapper.style.transform = `translateX(-${partnersContainer.clientWidth}px)`;
+                setTimeout(() => {
+                    partnersWrapper.style.transition = 'none';
+                    partnersWrapper.style.transform = 'translateX(0)';
+                    requestAnimationFrame(() => {
+                        partnersWrapper.style.transition = 'transform 30s linear';
+                        scrollPartners();
+                    });
+                }, 30000);
+            }
+        }
+
+        // Start the scrolling
+        partnersWrapper.style.transition = 'transform 30s linear';
+        scrollPartners();
+
+        // Reset on window resize
+        window.addEventListener('resize', () => {
+            partnersWrapper.style.transition = 'none';
+            partnersWrapper.style.transform = 'translateX(0)';
+            setTimeout(scrollPartners, 100);
+        });
+    });
 </script>
 @endpush
 @endsection
