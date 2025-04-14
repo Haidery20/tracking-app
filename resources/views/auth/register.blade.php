@@ -101,7 +101,7 @@
                 </div>
 
                 <!-- Right side - Image/Info -->
-                <div class="hidden lg:block bg-gradient-to-br from-primary to-secondary p-12">
+                <div class="hidden lg:block bg-primary/90 focus:outline-none">
                     <div class="h-full flex flex-col justify-center">
                         <div class="text-white">
                             <h3 class="text-2xl font-bold mb-4">Welcome to KONEKTA</h3>

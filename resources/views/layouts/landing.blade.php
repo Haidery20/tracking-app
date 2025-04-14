@@ -336,7 +336,7 @@
     <div class="min-h-screen bg-gray-100">
         <!-- Navigation -->
         <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-[#0fa6d5] to-white shadow-2xl rounded-full w-[95%] max-w-7xl">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-filter-md backdrop-blur-lg rounded-2xl">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
                         <a href="{{ route('landing') }}" class="text-2xl font-bold text-black">KONEKTA</a>
@@ -398,7 +398,7 @@
         </div> -->
 
         <!-- Add padding to the top of the main content to account for the fixed header -->
-        <div class="pt-24">
+        <div class="pt-0">
             @yield('content')
         </div>
 

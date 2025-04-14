@@ -1,5 +1,5 @@
 <nav class="bg-white/80 backdrop-blur-sm fixed w-full z-50 transition-all duration-300" id="floating-header">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto px-4 backdrop-blur-md backdrop-filter-lg">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
