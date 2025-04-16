@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to clicked tab and corresponding content
             tab.classList.remove('bg-gray-200', 'text-gray-700');
             tab.classList.add('active', 'bg-primary', 'text-white');
-            document.getElementById(`${tab.dataset.product}-content`).classList.remove('hidden');
+            document.getElementById(tab.dataset.product).classList.remove('hidden');
         });
     });
 });
