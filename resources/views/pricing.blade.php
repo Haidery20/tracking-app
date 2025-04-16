@@ -33,7 +33,7 @@
         </div>
 
         <!-- Web Hosting Section -->
-        <div class="product-content active" id="hosting-content">
+        <div class="product-content active" id="domain-hosting">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Basic Plan -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
@@ -178,7 +178,7 @@
         </div>
 
         <!-- Web Design Section -->
-        <div class="product-content hidden" id="design-content">
+        <div class="product-content hidden" id="web-design">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Basic Plan -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -317,7 +317,7 @@
         </div>
 
         <!-- SMS Bulk Section -->
-        <div class="product-content hidden" id="sms-content">
+        <div class="product-content hidden" id="bulk-sms">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Basic Plan -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">

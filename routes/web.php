@@ -19,7 +19,22 @@ Route::get('/', function () {
     return view('landing');
 })->name('landing');
 
-Route::get('/services', function () {
+Route::get('/domain/search', function (Request $request) {
+    $domain = $request->input('domain');
+    
+    // TODO: Implement domain availability check
+    
+    return view('domain.search-results', [
+        'domain' => $domain
+    ]);
+})->name('domain.search');
+
+Route::get('/services/{service?}', function ($service = null) {
+    if ($service) {
+        return view('services.' . $service, [
+            'service' => $service
+        ]);
+    }
     return view('services');
 })->name('services');
 
