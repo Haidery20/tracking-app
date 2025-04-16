@@ -22,6 +22,9 @@
                 <a href="/about" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
                     About
                 </a>
+                <a href="/contact" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                    Contact
+                </a>
             </div>
 
             <!-- Desktop Actions -->
@@ -57,6 +60,9 @@
             </a>
             <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700 hover:bg-gray-50">
                 About
+            </a>
+            <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-700 hover:bg-gray-50">
+                Contact
             </a>
         </div>
         <div class="px-5 py-3">
