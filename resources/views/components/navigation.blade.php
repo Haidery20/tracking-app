@@ -1,4 +1,4 @@
-<nav class="bg-white border-b border-gray-100">
+<nav class="bg-white border-b border-gray-100" x-data="{ open: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
@@ -100,12 +100,16 @@
         <div class="pt-4 pb-1 border-t border-gray-200">
             @auth
                 <div class="px-4">
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="text-base font-medium text-gray-900">
+                        {{ Auth::user()->name }}
+                    </div>
+                    <div class="text-sm font-medium text-gray-500">
+                        {{ Auth::user()->email }}
+                    </div>
                 </div>
 
                 <div class="mt-3 space-y-1">
-                    <x-responsive-nav-link :href="route('dashboard')">
+                    <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-responsive-nav-link>
 
@@ -120,7 +124,7 @@
                     </form>
                 </div>
             @else
-                <div class="space-y-1">
+                <div class="mt-3 space-y-1">
                     <x-responsive-nav-link :href="route('login')">
                         {{ __('Log in') }}
                     </x-responsive-nav-link>

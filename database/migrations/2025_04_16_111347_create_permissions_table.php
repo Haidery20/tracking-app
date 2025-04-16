@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('geofences', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('type'); // 'circle' or 'polygon'
-            $table->json('coordinates'); // For circle: [lat, lng, radius], For polygon: [[lat, lng], [lat, lng], ...]
             $table->string('description')->nullable();
-            $table->boolean('status')->default(true);
-            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('geofences');
+        Schema::dropIfExists('permissions');
     }
 };

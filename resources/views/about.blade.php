@@ -9,7 +9,7 @@
                     About <span class="text-primary">KONEKTA</span>
                 </h1>
                 <p class="text-xl md:text-2xl leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="200">
-                    Empowering businesses with innovative tracking solutions
+                    Empowering businesses with innovative technological solutions
                 </p>
             </div>
         </div>
@@ -29,7 +29,7 @@
                         </div>
                         <h3 class="text-xl font-semibold text-[#0fa6d5] mb-4">Innovation</h3>
                         <p class="text-gray-600">
-                            We constantly push boundaries to create cutting-edge tracking solutions that transform how businesses operate.
+                            We constantly push boundaries to create cutting-edge technological solutions that transform how businesses operate.
                         </p>
                     </div>
                     <div class="bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:ring-2 hover:ring-[#0fa6d5] hover:ring-opacity-20" data-aos="fade-up" data-aos-delay="400">
@@ -65,9 +65,9 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:ring-2 hover:ring-[#0fa6d5] hover:ring-opacity-20" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-40 h-40 bg-gradient-to-r from-[#0fa6d5] to-white rounded-full flex items-center justify-center text-white mb-6">
-                            <img src="{{ asset('public/images/Marlyn.jpg') }}" alt="Marlyn" class="w-36 h-36 rounded-full object-cover">
+                            <img src="{{ asset('images/Marlyn.jpg') }}" alt="Marlyn" class="w-36 h-36 rounded-full object-cover">
                         </div>
-                        <h3 class="text-xl font-semibold text-[#0fa6d5] mb-2">Marlyn</h3>
+                        <h3 class="text-xl font-semibold text-[#0fa6d5] mb-2">Marlyn Jerry</h3>
                         <p class="text-gray-600 mb-4">Founder & CEO</p>
                         <div class="flex justify-center gap-4">
                             <a href="#" class="text-gray-400 hover:text-[#0fa6d5] transition-all duration-300 hover:scale-110">
@@ -80,9 +80,9 @@
                     </div>
                     <div class="bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:ring-2 hover:ring-[#0fa6d5] hover:ring-opacity-20" data-aos="fade-up" data-aos-delay="400">
                         <div class="w-40 h-40 bg-gradient-to-r from-[#0fa6d5] to-white rounded-full flex items-center justify-center text-white mb-6">
-                            <img src="{{ asset('images/team/Haidery.jpg') }}" alt="Haidery" class="w-36 h-36 rounded-full object-cover">
+                            <img src="{{ asset('images/Haidery.jpg') }}" alt="Haidery" class="w-36 h-10 rounded-full object-cover">
                         </div>
-                        <h3 class="text-xl font-semibold text-[#0fa6d5] mb-2">Haidery</h3>
+                        <h3 class="text-xl font-semibold text-[#0fa6d5] mb-2">Haidery Shango</h3>
                         <p class="text-gray-600 mb-4">CTO</p>
                         <div class="flex justify-center gap-4">
                             <a href="#" class="text-gray-400 hover:text-[#0fa6d5] transition-all duration-300 hover:scale-110">

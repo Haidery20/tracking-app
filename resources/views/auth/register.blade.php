@@ -81,7 +81,7 @@
                         </div>
 
                         <div>
-                            <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITEKEY') }}"></div>
+    
                         </div>
 
                         <div>
@@ -101,26 +101,26 @@
                 </div>
 
                 <!-- Right side - Image/Info -->
-                <div class="hidden lg:block bg-primary/90 focus:outline-none">
+                <div class="hidden lg:block bg-green">
                     <div class="h-full flex flex-col justify-center">
-                        <div class="text-white">
+                        <div class="text-black">
                             <h3 class="text-2xl font-bold mb-4">Welcome to KONEKTA</h3>
-                            <p class="text-white/90 mb-8">Join thousands of professionals who are already using KONEKTA to manage their projects efficiently.</p>
+                            <p class="text-black/90 mb-8">Join thousands of professionals who are already using KONEKTA to manage their projects efficiently.</p>
                             <ul class="space-y-4">
                                 <li class="flex items-center">
-                                    <svg class="h-5 w-5 text-white/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="h-5 w-5 text-black/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
                                     Real-time project tracking
                                 </li>
                                 <li class="flex items-center">
-                                    <svg class="h-5 w-5 text-white/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="h-5 w-5 text-black/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
                                     Team collaboration tools
                                 </li>
                                 <li class="flex items-center">
-                                    <svg class="h-5 w-5 text-white/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="h-5 w-5 text-black/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
                                     Advanced analytics
@@ -134,5 +134,5 @@
     </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 @endsection

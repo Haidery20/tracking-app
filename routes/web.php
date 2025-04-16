@@ -14,6 +14,19 @@ use App\Http\Controllers\PageViewController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use Inertia\Inertia;
 
+// Authentication Routes
+Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/register', [RegisterController::class, 'show'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
+// Password Reset Routes
+Route::get('/password/reset', [PasswordResetController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('/password/email', [PasswordResetController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('/password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
+Route::post('/password/reset', [PasswordResetController::class, 'reset'])->name('password.update');
+
 // Main Pages
 Route::get('/', function () {
     return view('landing');
@@ -66,8 +79,16 @@ Route::post('/password/reset', [PasswordResetController::class, 'reset'])->name(
 // Dashboard Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        return view('dashboard');
     })->name('dashboard');
+
+    // Profile Routes
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    // Device Routes
+    Route::resource('devices', DeviceController::class);
 });
 
 // Admin Routes
