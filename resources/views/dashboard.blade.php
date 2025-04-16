@@ -5,12 +5,30 @@
 @section('content')
 <div class="container mx-auto px-4 py-8">
     <div class="bg-white rounded-2xl shadow-lg p-8">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800">Welcome, {{ Auth::user()->name }}!</h1>
-            <form method="POST" action="{{ route('logout') }}" class="inline">
-                @csrf
-                <button type="submit" class="btn btn-danger">Logout</button>
-            </form>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+            <div class="flex flex-col">
+                <h1 class="text-3xl font-bold text-gray-800">Welcome, {{ Auth::user()->name }}!</h1>
+                @if(Auth::user()->roles()->exists())
+                    <p class="text-lg text-gray-600 mt-2">{{ Auth::user()->roles()->first()->name }} @ {{ now()->format('l, F j, Y') }}</p>
+                @endif
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <div class="flex items-center">
+                        <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-medium text-white bg-blue-600 rounded-full">
+                            {{ Auth::user()->devices()->count() }}
+                        </span>
+                        <span class="ml-2 text-sm text-gray-600">Active Devices</span>
+                    </div>
+                </div>
+                <form method="POST" action="{{ route('logout') }}" class="inline">
+                    @csrf
+                    <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        Logout
+                    </button>
+                </form>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
