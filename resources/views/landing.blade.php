@@ -193,7 +193,7 @@
             <div class="mt-12 text-center">
                 <h3 class="text-xl font-semibold text-gray-900 mb-6">Or get started with our other services:</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="{{ route('pricing') }}#web-design" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <a href="/pricing#web-design" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <div class="flex items-center justify-center">
                             <div class="flex-shrink-0">
                                 <i class="fas fa-paint-brush text-2xl text-primary mr-3"></i>
@@ -205,7 +205,7 @@
                         </div>
                     </a>
 
-                    <a href="{{ route('pricing') }}#bulk-sms" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <a href="/pricing#bulk-sms" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <div class="flex items-center justify-center">
                             <div class="flex-shrink-0">
                                 <i class="fas fa-sms text-2xl text-primary mr-3"></i>
@@ -217,7 +217,7 @@
                         </div>
                     </a>
 
-                    <a href="{{ route('pricing') }}#domain-hosting" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <a href="/pricing#domain-hosting" class="px-6 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <div class="flex items-center justify-center">
                             <div class="flex-shrink-0">
                                 <i class="fas fa-server text-2xl text-primary mr-3"></i>
