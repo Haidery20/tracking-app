@@ -33,7 +33,7 @@
         </div>
 
         <!-- Web Hosting Section -->
-        <div class="product-content active" id="domain-hosting">
+        <div class="product-content active" id="hosting">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Basic Plan -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
@@ -538,6 +538,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.product-tab');
     const contents = document.querySelectorAll('.product-content');
 
+    // Initialize active tab
+    const activeTab = document.querySelector('.product-tab.active');
+    if (activeTab) {
+        const activeContent = document.getElementById(activeTab.dataset.product);
+        if (activeContent) {
+            activeContent.classList.remove('hidden');
+        }
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs and contents
@@ -548,7 +557,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to clicked tab and corresponding content
             tab.classList.remove('bg-gray-200', 'text-gray-700');
             tab.classList.add('active', 'bg-primary', 'text-white');
-            document.getElementById(tab.dataset.product).classList.remove('hidden');
+            const content = document.getElementById(tab.dataset.product);
+            if (content) {
+                content.classList.remove('hidden');
+            }
         });
     });
 });
