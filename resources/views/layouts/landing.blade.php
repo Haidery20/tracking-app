@@ -629,41 +629,55 @@
             }
         }
 
-        // Function to toggle theme
-        function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                setTheme('light');
-            } else {
-                setTheme('dark');
+        // Function to determine theme based on time of day
+        function determineThemeBasedOnTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            
+            // Evening: 6 PM to 6 AM
+            if (hours >= 18 || hours < 6) {
+                return 'dark';
             }
+            // Daytime: 6 AM to 6 PM
+            return 'light';
         }
 
-        // Initialize theme
+        // Function to toggle theme
+        function toggleTheme() {
+            const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        }
+
+        // Initialize theme on page load
         function initTheme() {
             const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             
             if (savedTheme) {
+                // If user has a saved preference, use that
                 setTheme(savedTheme);
-            } else if (prefersDark) {
-                setTheme('dark');
             } else {
-                setTheme('light');
+                // Otherwise, use time-based theme
+                setTheme(determineThemeBasedOnTime());
             }
         }
 
         // Add event listener to theme toggle button
         document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
-        // Initialize theme on page load
-        document.addEventListener('DOMContentLoaded', initTheme);
-
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // Update theme every hour
+        setInterval(() => {
             if (!localStorage.getItem('theme')) {
-                setTheme(e.matches ? 'dark' : 'light');
+                // Only update if user hasn't explicitly set a theme
+                const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                const timeBasedTheme = determineThemeBasedOnTime();
+                if (currentTheme !== timeBasedTheme) {
+                    setTheme(timeBasedTheme);
+                }
             }
-        });
+        }, 3600000); // 3600000ms = 1 hour
+
+        // Initialize theme immediately
+        initTheme();
     </script>
 </body>
 </html>
