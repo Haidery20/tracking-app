@@ -29,14 +29,7 @@ Route::get('/domain/search', function (Request $request) {
     ]);
 })->name('domain.search');
 
-Route::get('/services/{service?}', function ($service = null) {
-    if ($service) {
-        return view('services.' . $service, [
-            'service' => $service
-        ]);
-    }
-    return view('services');
-})->name('services');
+
 
 Route::get('/features', function () {
     return view('features');

@@ -127,7 +127,9 @@
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                             KONEKTA: Connect, Create & <span class="text-primary">Conquer</span>
                         </h1>
-                        <p class="tagline">Bulk SMS, Web Design & Hosting Services Made Simple</p>
+                        <h2 class="tagline">
+                            Bulk SMS, Web Design & Hosting Services Made Simple
+                        </h2>
                         <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                         Smart Websites. Powerful Bulk SMS.
                         </p>
@@ -232,7 +234,7 @@
     </div>
 
     <!-- Stats Section -->
-    <div class="py-12 bg-gray-50">
+   <!-- <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
@@ -253,7 +255,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Partners Section -->
     <div class="py-16 bg-white">
