@@ -17,7 +17,7 @@
                         <x-navigation.responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                             {{ __('Home') }}
                         </x-navigation.responsive-nav-link>
-                        <x-navigation.responsive-nav-link :href="route('services')" :active="request()->routeIs('services')">
+                        <x-navigation.responsive-nav-link :href="'/'" :active="request()->routeIs('landing')">
                             {{ __('Services') }}
                         </x-navigation.responsive-nav-link>
                         <x-navigation.responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">

@@ -385,7 +385,7 @@
                             <a href="{{ route('register') }}" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-[#0fa6d5] bg-white hover:bg-gray-100 transition-colors duration-300">
                                 Get Started
                             </a>
-                            <a href="{{ route('services') }}" class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white/10 transition-colors duration-300">
+                            <a href="/" class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white/10 transition-colors duration-300">
                                 Learn More
                             </a>
                         </div>
