@@ -24,10 +24,10 @@
             <button class="product-tab active px-6 py-3 rounded-full bg-primary text-white font-medium transform transition-all duration-300 hover:scale-105" data-product="hosting">
                 <i class="fas fa-server mr-2"></i>Web Hosting
             </button>
-            <button class="product-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-medium transform transition-all duration-300 hover:scale-105" data-product="design">
+            <button class="product-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-medium transform transition-all duration-300 hover:scale-105" data-product="web-design">
                 <i class="fas fa-paint-brush mr-2"></i>Web Design
             </button>
-            <button class="product-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-medium transform transition-all duration-300 hover:scale-105" data-product="sms">
+            <button class="product-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 font-medium transform transition-all duration-300 hover:scale-105" data-product="bulk-sms">
                 <i class="fas fa-comment-alt mr-2"></i>SMS Bulk
             </button>
         </div>

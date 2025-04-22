@@ -116,24 +116,25 @@
     }
 </style>
 
-<div class="relative">
+<div class="relative min-h-screen">
     <!-- Hero Section -->
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden flex flex-col justify-center min-h-screen">
         <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6"></div>
-        <div class="relative max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative z-10">
+                <main class="mt-10 mx-0 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="lg:text-left">
                         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            KONEKTA: Connect, Create & <span class="text-primary">Conquer</span>
+                            <span class="block">KONEKTA:</span>
+                            <span class="block">Connect, Create & <span class="text-primary">Conquer</span></span>
                         </h1>
                         <h2 class="tagline">
                             Bulk SMS, Web Design & Hosting Services Made Simple
                         </h2>
-                        <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        Smart Websites. Powerful Bulk SMS.
+                        <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl lg:mx-0">
+                            Smart Websites. Powerful Bulk SMS.
                         </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
                             <div class="rounded-md shadow">
                                 <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-blur text-base font-medium rounded-md text-black bg-blue-400 hover:bg-blue-500 md:py-4 md:text-lg md:px-10">
                                     Get started

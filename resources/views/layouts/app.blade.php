@@ -66,10 +66,11 @@
         </main>
     </div>
 
-    <footer class="bg-gray-800 bg-opacity-95 text-gray-300 relative z-10">
+    <!-- Footer -->
+    <!--<footer class="bg-gray-800 bg-opacity-95 text-gray-300 relative z-10">
         <div class="max-w-6xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
+                 Company Info 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">KONEKTA</h3>
                     <p class="text-gray-400 mb-4">Your trusted partner in connectivity solutions.</p>
@@ -86,7 +87,7 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
+                 Quick Links
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -97,7 +98,7 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
+                 Contact Info
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul class="space-y-2">
@@ -116,7 +117,7 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+                 Newsletter 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates.</p>
@@ -133,6 +134,6 @@
                 <p>&copy; {{ date('Y') }} KONEKTA. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>

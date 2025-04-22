@@ -339,12 +339,14 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-filter-md backdrop-blur-lg rounded-2xl">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
-                        <a href="{{ route('landing') }}" class="text-2xl font-bold text-black">KONEKTA</a>
+                        <a href="{{ route('landing') }}" class="flex items-center">
+                            <img src="{{ asset('images/KONEKTA(2).svg') }}" alt="KONEKTA Logo" class="w-32 h-32 mx-auto">
+                        </a>
                     </div>
 
                     <!-- Desktop Menu -->
                     <div class="hidden sm:flex sm:items-center sm:space-x-4">
-                        <a href="/" class="text-black hover:text-[#0fa6d5] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Services</a>
+                        <!--<a href="/" class="text-black hover:text-[#0fa6d5] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Services</a>-->
                         <a href="{{ route('pricing') }}" class="text-black hover:text-[#0fa6d5] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Pricing</a>
                         <a href="{{ route('about') }}" class="text-black hover:text-[#0fa6d5] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
                         <a href="{{ route('contact') }}" class="text-black hover:text-[#0fa6d5] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Contact</a>

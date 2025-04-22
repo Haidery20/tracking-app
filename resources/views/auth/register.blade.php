@@ -10,6 +10,7 @@
                 <!-- Left side - Form -->
                 <div class="p-8 lg:p-12">
                     <div class="text-center lg:text-left mb-8">
+                        
                         <h2 class="text-3xl font-bold text-primary">Create Your Account</h2>
                         <p class="mt-2 text-sm text-gray-600">Join KONEKTA and start tracking your projects today</p>
                     </div>
@@ -103,6 +104,9 @@
                 <!-- Right side - Image/Info -->
                 <div class="hidden lg:block bg-green">
                     <div class="h-full flex flex-col justify-center">
+                    <div class="mb-6">
+                    <div class="h-full flex flex-col justify-center">
+                            <img src="{{ asset('images/KONEKTA.svg') }}" alt="KONEKTA Logo" class="w-60 h-60 mx-auto">
                         <div class="text-black">
                             <h3 class="text-2xl font-bold mb-4">Welcome to KONEKTA</h3>
                             <p class="text-black/90 mb-8">Join thousands of professionals who are already using KONEKTA to manage their projects efficiently.</p>

@@ -168,7 +168,7 @@
             </div>
         </div>
             <!-- Footer -->
-        <footer class="bg-gradient-to-r from-[#0fa6d5] to-white text-black py-12">
+        <!--<footer class="bg-gradient-to-r from-[#0fa6d5] to-white text-black py-12">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
@@ -241,7 +241,7 @@
                     </p>
                 </div>
             </div>
-        </footer>
+        </footer>-->
     </div>
 </div>
 @endsection
