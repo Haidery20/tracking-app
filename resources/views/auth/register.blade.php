@@ -106,11 +106,11 @@
                     <div class="h-full flex flex-col justify-center">
                     <div class="mb-6">
                     <div class="h-full flex flex-col justify-center">
-                            <img src="{{ asset('images/KONEKTA.svg') }}" alt="KONEKTA Logo" class="w-60 h-60 mx-auto">
+                            <img src="{{ asset('images/Asset7.svg') }}" alt="KONEKTA Logo" class="w-32 h-60 mx-auto">
                         <div class="text-black">
-                            <h3 class="text-2xl font-bold mb-4">Welcome to KONEKTA</h3>
-                            <p class="text-black/90 mb-8">Join thousands of professionals who are already using KONEKTA to manage their projects efficiently.</p>
-                            <ul class="space-y-4">
+                            <h3 class="text-2xl font-bold mb-4 text-center">Welcome to KONEKTA</h3>
+                            <p class="text-black/90 mb-8 text-center">Join thousands of professionals who are already using KONEKTA to manage their projects efficiently.</p>
+                            <ul class="space-y-4 text-center">
                                 <li class="flex items-center">
                                     <svg class="h-5 w-5 text-black/90 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />

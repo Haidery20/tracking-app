@@ -121,9 +121,12 @@ const Footer = () => {
 
                 <div className="mt-12 border-t border-gray-800 pt-8">
                     <div className="flex justify-between items-center">
-                        <p className="text-gray-400">
-                            © 2025 KONEKTA. All rights reserved.
-                        </p>
+                        <div className="flex items-center space-x-4">
+                            <img src="/images/Asset7.svg" alt="KONEKTA Logo" className="h-8 w-auto" />
+                            <p className="text-gray-400">
+                                &copy; 2025 KONEKTA. All rights reserved.
+                            </p>
+                        </div>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                                 Privacy

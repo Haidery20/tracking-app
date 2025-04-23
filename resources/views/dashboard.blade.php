@@ -15,8 +15,12 @@
             <div class="flex flex-col">
                 <div class="flex items-center gap-4 mb-4">
                     <a href="{{ route('dashboard') }}" class="flex items-center">
-                        <span class="text-2xl font-bold text-primary">KONEKTA</span>
-                    </a>
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="{{ route('landing') }}" class="flex items-center">
+                            <img src="{{ asset('images/Asset7.svg') }}" alt="KONEKTA Logo" class="h-8 w-auto">
+
+                        </a>
+                    </div>
                 </div>
                 <h1 class="text-3xl font-bold text-gray-800">Welcome, {{ Auth::user()->name }}!</h1>
                 <div class="flex items-center gap-4 mt-2">

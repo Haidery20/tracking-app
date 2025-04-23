@@ -118,9 +118,11 @@
 
 <div class="relative min-h-screen">
     <!-- Hero Section -->
-    <div class="relative overflow-hidden flex flex-col justify-center min-h-screen">
+    <div class="relative overflow-hidden flex flex-col lg:flex-row justify-center min-h-screen">
         <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full lg:w-1/2">
             <div class="relative z-10">
                 <main class="mt-10 mx-0 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                     <div class="lg:text-left">
@@ -148,6 +150,13 @@
                         </div>
                     </div>
                 </main>
+            </div>
+        </div>
+
+        <!-- Illustration -->
+        <div class="relative w-full lg:w-1/2 h-full flex items-center justify-center">
+            <div class="relative z-10">
+                <img src="{{ asset('images/hero-illustration.svg') }}" alt="Person with laptop illustration" class="w-full h-auto max-w-2xl">
             </div>
         </div>
     </div>
