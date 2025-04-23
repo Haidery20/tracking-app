@@ -44,7 +44,7 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+    <!--<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex">
@@ -54,9 +54,9 @@
                             <span class="text-xl font-bold text-gray-900">KONEKTA</span>
                         </a>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+               <!-- <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
                     <a href="{{ route('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 border-primary text-sm font-medium text-gray-900">
                         Dashboard
                     </a>
@@ -75,9 +75,9 @@
                                 <span class="sr-only">Open user menu</span>
                                 <img class="h-8 w-8 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
                             </button>
-                        </div>
+                        </div>-->
 
-                        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
+                        <!--<div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
                             <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -85,7 +85,7 @@
                                     Sign out
                                 </button>
                             </form>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
