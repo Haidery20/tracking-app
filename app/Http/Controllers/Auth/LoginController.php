@@ -50,3 +50,13 @@ class LoginController extends Controller
         return redirect('/');
     }
 }
+class LoginController extends Controller
+{
+    use AuthenticatesUsers;
+
+    protected function authenticated($request, $user)
+    {
+        $user->last_login_at = now();
+        $user->save();
+    }
+}

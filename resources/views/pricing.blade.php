@@ -224,18 +224,20 @@
                 </div>
 
                 <!-- Pro Plan -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4">
+                        <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
+                            Most Popular
+                        </span>
+                    </div>
                     <div class="px-6 py-8">
-                        <div class="absolute top-0 right-0 -mt-4 -mr-4">
-                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
-                                Most Popular
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
-                        <p class="mt-4 text-gray-500">Ideal for growing businesses</p>
-                        <div class="mt-8">
-                            <span class="text-4xl font-bold text-gray-900">TZS 1,500,000</span>
-                            <span class="text-gray-500">/one-time</span>
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
+                            <p class="mt-4 text-gray-500">Ideal for growing businesses</p>
+                            <div class="mt-8">
+                                <span class="text-4xl font-bold text-gray-900">TZS 1,500,000</span>
+                                <span class="text-gray-500">/one-time</span>
+                            </div>
                         </div>
                         <ul class="mt-8 space-y-4">
                             <li class="flex items-center">
@@ -363,18 +365,20 @@
                 </div>
 
                 <!-- Pro Plan -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-primary relative">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4">
+                        <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
+                            Most Popular
+                        </span>
+                    </div>
                     <div class="px-6 py-8">
-                        <div class="absolute top-0 right-0 -mt-4 -mr-4">
-                            <span class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full shadow-lg">
-                                Most Popular
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
-                        <p class="mt-4 text-gray-500">Ideal for growing businesses</p>
-                        <div class="mt-8">
-                            <span class="text-4xl font-bold text-gray-900">TZS 100</span>
-                            <span class="text-gray-500">/message</span>
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
+                            <p class="mt-4 text-gray-500">Ideal for growing businesses</p>
+                            <div class="mt-8">
+                                <span class="text-4xl font-bold text-gray-900">TZS 100</span>
+                                <span class="text-gray-500">/message</span>
+                            </div>
                         </div>
                         <ul class="mt-8 space-y-4">
                             <li class="flex items-center">
@@ -507,11 +511,11 @@
                 @endphp
 
                 <div class="relative bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div class="absolute -top-4 -left-4 bg-white rounded-full p-2 shadow-lg">
+                    <div class="absolute -top-4 -left-6 bg-white rounded-full p-2 shadow-lg">
                         <i class="{{ $faq['icon'] }} {{ $iconColors[array_rand($iconColors)] }} text-xl"></i>
                     </div>
                     
-                    <div class="space-y-4">
+                    <div class="space-y-4 pl-8">
                         <h3 class="text-xl font-semibold text-gray-900">
                             {{ $faq['question'] }}
                         </h3>

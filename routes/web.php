@@ -101,3 +101,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
 Route::get('/increment-views', [PageViewController::class, 'incrementHomepageViews']);
 Route::get('/get-views', [PageViewController::class, 'getHomepageViews']);
+
+// Support Routes
+Route::get('/support', [SupportController::class, 'index'])->name('support');
+Route::get('/support/contact', [SupportController::class, 'contact'])->name('support.contact');
+Route::get('/support/faq', [SupportController::class, 'faq'])->name('support.faq');
+

@@ -49,6 +49,87 @@
     padding: 2rem 0;
 }
 
+/* Tagline Styles */
+.tagline {
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+@media (min-width: 640px) {
+    .tagline {
+        font-size: 1.875rem;
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tagline {
+        font-size: 2.25rem;
+        line-height: 1.3;
+    }
+}
+
+/* Hero Subtitle Styles */
+.hero-subtitle {
+    margin-top: 1.5rem;
+    color: var(--gray-600);
+    max-width: 48rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+    .hero-subtitle {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+}
+
+/* Button Styles */
+.cta-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Button Styles */
+.hero-section .cta-button {
+    background: white;
+    color: var(--gray-900);
+    border: 2px solid var(--gray-900);
+}
+
+.hero-section .cta-button:hover {
+    background: var(--gray-900);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Button Styles */
+.cta-button.secondary {
+    background: transparent;
+    color: var(--gray-900);
+    border: 2px solid var(--gray-900);
+}
+
+.cta-button.secondary:hover {
+    background: var(--gray-900);
+    color: white;
+}
+
 /* Footer Styles */
 .footer {
     background-color: var(--gray-800);
@@ -99,7 +180,6 @@
     }
     
     .mobile-menu {
-        display: flex;
-        gap: 1rem;
+        display: block;
     }
 }
