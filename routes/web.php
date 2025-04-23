@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageViewController;
 use App\Http\Controllers\Auth\PasswordResetController;
+use App\Http\Controllers\ProfileController;
 use Inertia\Inertia;
 
 // Authentication Routes
@@ -63,19 +64,6 @@ Route::get('/community', function () {
     return view('community');
 })->name('community');
 
-// Authentication Routes
-Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/register', [RegisterController::class, 'show'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
-
-// Password Reset Routes
-Route::get('/password/reset', [PasswordResetController::class, 'showLinkRequestForm'])->name('password.request');
-Route::post('/password/email', [PasswordResetController::class, 'sendResetLinkEmail'])->name('password.email');
-Route::get('/password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
-Route::post('/password/reset', [PasswordResetController::class, 'reset'])->name('password.update');
-
 // Dashboard Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
@@ -85,7 +73,7 @@ Route::middleware(['auth'])->group(function () {
     // Profile Routes
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
     // Device Routes
     Route::resource('devices', DeviceController::class);
@@ -106,4 +94,3 @@ Route::get('/get-views', [PageViewController::class, 'getHomepageViews']);
 Route::get('/support', [SupportController::class, 'index'])->name('support');
 Route::get('/support/contact', [SupportController::class, 'contact'])->name('support.contact');
 Route::get('/support/faq', [SupportController::class, 'faq'])->name('support.faq');
-
