@@ -130,7 +130,7 @@
                             <span class="block">KONEKTA:</span>
                             <span class="block">Connect, Create & <span class="text-primary">Conquer</span></span>
                         </h1>
-                        <h2 class="tagline">
+                        <h2 class="tagline text-2x1 font-semibold text-gray-900 sm:text-3xl">
                             Bulk SMS, Web Design & Hosting Services Made Simple
                         </h2>
                         <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl lg:mx-0">
@@ -138,7 +138,7 @@
                         </p>
                         <div class="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
                             <div class="rounded-md shadow">
-                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-blur text-base font-medium rounded-md text-black bg-blue-400 hover:bg-blue-500 md:py-4 md:text-lg md:px-10">
+                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-blur text-base font-medium rounded-md text-black bg-white hover:bg-white/90 md:py-4 md:text-lg md:px-10">
                                     Get started
                                 </a>
                             </div>
