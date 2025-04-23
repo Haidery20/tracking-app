@@ -11,10 +11,7 @@ use Database\Seeders\UsersSeeder;
 use Database\Seeders\DevicesSeeder;
 use Database\Seeders\GeofencesSeeder;
 use Database\Seeders\AlertSettingsSeeder;
-use Database\Seeders\TestUsersSeeder;
-use App\Models\Device;
-use App\Models\Geofence;
-use App\Models\AlertSetting;
+use Database\Seeders\TestUserSeeder;
 
 class DatabaseSeeder extends Seeder
 {

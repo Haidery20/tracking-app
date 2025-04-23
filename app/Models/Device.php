@@ -27,6 +27,8 @@ class Device extends Model
         'last_ping' => 'datetime'
     ];
 
+    protected $policy = DevicePolicy::class;
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

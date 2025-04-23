@@ -6,6 +6,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
+                    <div class="mb-6">
+                        <img src="{{ asset('images/KONEKTA.svg') }}" alt="KONEKTA Logo" class="w-32 h-32 mx-auto">
+                    </div>
                     <a href="{{ route('landing') }}">
                         <span class="text-2xl font-bold text-primary">KONEKTA</span>
                     </a>
@@ -16,9 +19,6 @@
                     <div class="flex space-x-4">
                         <x-navigation.responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                             {{ __('Home') }}
-                        </x-navigation.responsive-nav-link>
-                        <x-navigation.responsive-nav-link :href="route('features')" :active="request()->routeIs('features')">
-                            {{ __('Features') }}
                         </x-navigation.responsive-nav-link>
                         <x-navigation.responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
                             {{ __('Pricing') }}
@@ -94,9 +94,6 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-navigation.responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                 {{ __('Home') }}
-            </x-navigation.responsive-nav-link>
-            <x-navigation.responsive-nav-link :href="route('features')" :active="request()->routeIs('features')">
-                {{ __('Features') }}
             </x-navigation.responsive-nav-link>
             <x-navigation.responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
                 {{ __('Pricing') }}

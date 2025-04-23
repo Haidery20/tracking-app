@@ -15,19 +15,26 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->validate([
+        $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
             
-            if (Auth::user()->hasRole('admin')) {
-                return redirect()->route('admin.dashboard');
+            // Check if user has any role assigned
+            if (Auth::user()->roles()->exists()) {
+                // If user has admin role, redirect to admin dashboard
+                if (Auth::user()->hasRole('admin')) {
+                    return redirect()->route('admin.dashboard');
+                }
+                // For other roles, redirect to regular dashboard
+                return redirect()->route('dashboard');
             }
             
-            return redirect()->intended('/dashboard');
+            // If user has no role, redirect to dashboard
+            return redirect()->route('dashboard');
         }
 
         return back()->withErrors([

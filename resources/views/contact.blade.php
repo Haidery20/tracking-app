@@ -160,52 +160,5 @@
             </div>
         </div>
     </div>
-
-    <!-- FAQ Section -->
-    <div class="bg-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <div class="space-y-6">
-                @foreach([
-                    [
-                        'question' => 'How quickly can you respond to support requests?',
-                        'answer' => 'Our support team typically responds within 1-2 business hours during working days.',
-                        'icon' => 'fas fa-clock'
-                    ],
-                    [
-                        'question' => 'Do you offer on-site installation?',
-                        'answer' => 'Yes, we provide professional installation services across Tanzania. Contact us for more details.',
-                        'icon' => 'fas fa-tools'
-                    ],
-                    [
-                        'question' => 'What payment methods do you accept?',
-                        'answer' => 'We accept mobile payments (M-Pesa, Tigo Pesa, Airtel Money), bank transfers, and cash payments at our offices.',
-                        'icon' => 'fas fa-credit-card'
-                    ]
-                ] as $faq)
-                @php
-                    $iconColors = [
-                        'text-blue-500',
-                        'text-green-500',
-                        'text-purple-500'
-                    ];
-                @endphp
-                <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0">
-                            <div class="p-3 bg-primary/10 rounded-full">
-                                <i class="{{ $faq['icon'] }} {{ $iconColors[array_rand($iconColors)] }}"></i>
-                            </div>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-medium text-gray-900">{{ $faq['question'] }}</h3>
-                            <p class="mt-2 text-gray-500">{{ $faq['answer'] }}</p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
 </div>
 @endsection

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +15,44 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link href="{{ mix('css/main.css') }}" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0fa6d5;
+            --secondary-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        .primary {
+            color: var(--primary-color);
+        }
+
+        .primary-bg {
+            background-color: var(--primary-color);
+        }
+
+        .primary-hover:hover {
+            background-color: var(--primary-color);
+        }
+
+        .primary-border {
+            border-color: var(--primary-color);
+        }
+
+        .primary-text {
+            color: var(--primary-color);
+        }
+
+        .primary-bg-transparent {
+            background-color: rgba(var(--primary-color), 0.1);
+        }
+    </style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     @stack('styles')
 </head>
@@ -26,25 +60,17 @@
     <div class="min-h-screen bg-gray-100">
         <x-navigation />
 
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
-
         <!-- Page Content -->
         <main>
-            {{ $slot }}
+            @yield('content')
         </main>
     </div>
 
-    <footer class="bg-gray-800 bg-opacity-95 text-gray-300 relative z-10">
+    <!-- Footer -->
+    <!--<footer class="bg-gray-800 bg-opacity-95 text-gray-300 relative z-10">
         <div class="max-w-6xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Company Info -->
+                 Company Info 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">KONEKTA</h3>
                     <p class="text-gray-400 mb-4">Your trusted partner in connectivity solutions.</p>
@@ -61,7 +87,7 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
+                 Quick Links
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
@@ -72,7 +98,7 @@
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
+                 Contact Info
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul class="space-y-2">
@@ -91,7 +117,7 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+                 Newsletter 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates.</p>
@@ -108,6 +134,6 @@
                 <p>&copy; {{ date('Y') }} KONEKTA. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </footer>-->
 </body>
 </html>

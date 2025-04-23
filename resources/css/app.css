@@ -151,6 +151,81 @@
     }
 }
 
+/* Dark mode styles */
+.dark {
+    --background: #1a1a1a;
+    --surface: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #d4d4d4;
+    --border: #404040;
+}
+
+.light {
+    --background: #ffffff;
+    --surface: #f9fafb;
+    --text-primary: #1a1a1a;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+}
+
+:root {
+    --primary: #0fa6d5;
+    --secondary: #ffffff;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.container {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.border {
+    border-color: var(--border) !important;
+}
+
+/* Ensure dark mode works with gradients */
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary)) !important;
+}
+
+/* Ensure dark mode works with text colors */
+.text-white {
+    color: var(--text-primary) !important;
+}
+
+.text-white/90 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure dark mode works with hover states */
+.hover\:bg-primary\:90:hover {
+    background-color: rgba(var(--primary), 0.9) !important;
+}
+
+.hover\:text-primary\:80:hover {
+    color: rgba(var(--primary), 0.8) !important;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
