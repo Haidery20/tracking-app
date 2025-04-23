@@ -1,3 +1,18 @@
+# Directories
+/storage/*
+/public/uploads/*
+/public/assets/uploads/*
+/public/assets/images/uploads/*
+/public/assets/images/tmp/*
+/public/assets/images/cache/*
+
+# Files
+.env
+.env.backup
+.env.local
+.env.testing
+.env.staging
+.env.production
 /.phpunit.cache
 /node_modules
 /public/build
