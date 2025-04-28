@@ -156,7 +156,7 @@
         <!-- Illustration -->
         <div class="relative w-full lg:w-1/2 h-full flex items-center justify-center">
             <div class="relative z-10">
-                <img src="{{ asset('images/hero-illustration.svg') }}" alt="Person with laptop illustration" class="w-full h-auto max-w-2xl">
+                <img src="{{ asset('images/background.jpg') }}" alt="computer image" class="w-full h-auto max-w-4xl">
             </div>
         </div>
     </div>
