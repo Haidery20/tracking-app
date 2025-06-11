@@ -14,6 +14,27 @@ import Docs from './Pages/Docs.jsx';
 import Support from './Pages/Support.jsx';
 import HeroSection from './components/HeroSection';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HeroSection from './components/HeroSection';
+import ErrorBoundary from './components/Errorboundary.js';
+import Home from './Pages/Home';
+
+const App = () => {
+  return (
+    <ErrorBoundary>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} exact />
+        </Switch>
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);

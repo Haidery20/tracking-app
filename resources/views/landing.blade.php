@@ -118,45 +118,43 @@
 
 <div class="relative min-h-screen">
     <!-- Hero Section -->
-    <div class="relative overflow-hidden flex flex-col lg:flex-row justify-center min-h-screen">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6"></div>
+    <div class="relative flex flex-col lg:flex-row justify-center h-full">
+        <!-- Background Image with subtle blur -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('images/background2.jpg') }}'); filter: blur(4px); -webkit-filter: blur(4px); transform: scale(1.05);">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 transform -skew-y-6 opacity-95"></div>
+        </div>
         
-        <!-- Content -->
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full lg:w-1/2">
-            <div class="relative z-10">
-                <main class="mt-10 mx-0 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block">KONEKTA:</span>
-                            <span class="block">Connect, Create & <span class="text-primary">Conquer</span></span>
-                        </h1>
-                        <h2 class="tagline text-2x1 font-semibold text-gray-900 sm:text-3xl">
-                            Bulk SMS, Web Design & Hosting Services Made Simple
-                        </h2>
-                        <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl lg:mx-0">
-                            Smart Websites. Powerful Bulk SMS.
-                        </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-blur text-base font-medium rounded-md text-black bg-white hover:bg-white/90 md:py-4 md:text-lg md:px-10">
-                                    Get started
-                                </a>
-                            </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="{{ route('contact') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-100 md:py-4 md:text-lg md:px-10">
-                                    Contact sales
-                                </a>
+        <!-- Content Container -->
+        <div class="relative z-10 flex flex-col lg:flex-row justify-center items-center h-full">
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full lg:w-1/2">
+                <div class="relative z-10">
+                    <main class="mt-10 mx-0 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                        <div class="lg:text-left">
+                            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                                <span class="block">KONEKTA:</span>
+                                <span class="block">Connect, Create & <span class="text-primary">Conquer</span></span>
+                            </h1>
+                            <h2 class="tagline text-2x1 font-semibold text-gray-900 sm:text-3xl">
+                                Bulk SMS, Web Design & Hosting Services Made Simple
+                            </h2>
+                            <p class="hero-subtitle mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-0 md:mt-5 md:text-xl lg:mx-0">
+                                Smart Websites. Powerful Bulk SMS.
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
+                                <div class="rounded-md shadow">
+                                    <a href="{{ route('register') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-blur text-base font-medium rounded-md text-black bg-white hover:bg-white/90 md:py-4 md:text-lg md:px-10">
+                                        Get started
+                                    </a>
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="{{ route('contact') }}" class="cta-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-100 md:py-4 md:text-lg md:px-10">
+                                        Contact sales
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </main>
-            </div>
-        </div>
-
-        <!-- Illustration -->
-        <div class="relative w-full lg:w-1/2 h-full flex items-center justify-center">
-            <div class="relative z-10">
-                <img src="{{ asset('images/background.jpg') }}" alt="computer image" class="w-full h-auto max-w-4xl">
+                    </main>
+                </div>
             </div>
         </div>
     </div>
