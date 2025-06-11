@@ -13,27 +13,32 @@ import Careers from './Pages/Careers.jsx';
 import Docs from './Pages/Docs.jsx';
 import Support from './Pages/Support.jsx';
 import HeroSection from './components/HeroSection';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
-import ErrorBoundary from './components/Errorboundary.js';
+import ErrorBoundary from './components/Errorboundary';
 import Home from './Pages/Home';
 
+console.log('App.jsx: Starting to render...');
+
 const App = () => {
+    console.log('App.jsx: Rendering App component...');
   return (
     <ErrorBoundary>
       <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Home} exact />
-        </Switch>
+        <Routes>
+          <Route path="/" element={Home}/>
+        </Routes>
       </BrowserRouter>
     </ErrorBoundary>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if (!container) {
+  console.error('App.jsx: Could not find #app element!');
+} else {
+  console.log('App.jsx: Found #app element, creating root...');
+  const root = createRoot(container);
+  root.render(<App />);
+}
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
